@@ -1,3 +1,8 @@
+/*
+Red collor: #c0392b;
+Darker red: ##a43125;
+*/
+
 /*-------------------------------------------*/
 /*BASIC SETUP*/
 /*-------------------------------------------*/
@@ -44,6 +49,7 @@ h1 {
 
 .btn:link,
 .btn:visited {
+    margin-top: 20px;
     display: inline-block;
     padding: 10px 30px;
     font-weight: 300;
@@ -88,7 +94,7 @@ h1 {
 /*-------------------------------------------*/
 
 header {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(img/background-img.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(img/background-img1.jpg);
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -97,15 +103,38 @@ header {
 .ada-home-text-box {
     position: absolute;
     width: 1140px;
-    top: 50%;
-    left: 50%;
+    top: 48%;
+    left: 60%;
     transform: translate(-50%, -50%);
 }
 .logo{
+    margin-top: 20px;
     height: 250px;
     width: auto;
-    float: left
+    float: none;
 }
 .main-nav{
-    float: right;
+    float: left,bottom;
+    list-style: none;
+    margin-top: 40px;
+}
+.main-nav li{
+    display: block;
+    margin-left: 0;
+    margin-bottom: 30px;
+}
+.main-nav li a:link,
+.main-nav li a:visited{
+    padding: 8px 0;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 90%;/*it will be 18px;*/
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.2s;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active{
+    border-bottom: 2px solid #a43125;
 }
