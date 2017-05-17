@@ -28,15 +28,8 @@ html {
 }
 
 
-
-
-
 /*-------------------------------------------*/
-
-
 /*REUSABLE COMPONENTS*/
-
-
 /*-------------------------------------------*/
 
 .row {
@@ -47,9 +40,6 @@ html {
 section {
     padding: 80px 0;
 }
-
-
-
 
 
 /* ----- HEADINGS ----- */
@@ -93,10 +83,8 @@ h2:after {
 h3 {
     font-size: 110%;
     margin-bottom: 15px;
-    font-weight:400
+    font-weight: 400
 }
-
-
 
 
 /* ----- PARAGRAPHS ----- */
@@ -106,7 +94,6 @@ h3 {
     margin-left: 15%;
     margin-right: 15%;
 }
-
 
 .grid-box {
     padding: 1%;
@@ -118,17 +105,23 @@ h3 {
 }
 
 
-
 /* ----- ICONS ----- */
 
 .icon-big {
     font-size: 350%;
-    display: block; 
-    color:#c0392b;
+    display: block;
+    color: #c0392b;
     margin-bottom: 10px;
     padding-left: 2%;
 }
 
+.ada-icon {
+    height: 30%;
+    width: 30%;
+    margin-bottom: 10px;
+    padding-left: 2%;
+    display: block;
+}
 
 
 /* ----- BUTTONS ----- */
@@ -174,9 +167,6 @@ h3 {
     color: #fff;
     border: 1px solid #a43125;
 }
-
-
-
 
 
 /*-------------------------------------------*/
@@ -236,4 +226,28 @@ header {
 .main-nav li a:hover,
 .main-nav li a:active {
     border-bottom: 2px solid #a43125;
+}
+
+/*-------------------------------------------*/
+/*GALLERY*/
+/*-------------------------------------------*/
+.gallery-showcase{
+    list-style: none;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.gallery-showcase li{
+    display: block;
+    float: left;
+    width: 25%;
+    height: auto;
+}
+.gallery-photo{
+    width: 100%;
+    margin: 0
+}
+.gallery-photo img{
+    width: 100%;
+    height: auto;
 }
