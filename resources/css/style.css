@@ -19,8 +19,8 @@ Darker red: ##a43125;
 }
 
 html {
-    background-color: #fff;
-    color: #555;
+    /*    color: #555;*/
+    color: #fff;
     font-family: 'Lato', 'Arial', sans-serif;
     font-size: 20px;
     font-weight: 300;
@@ -28,8 +28,14 @@ html {
 }
 
 
+
+
 /*-------------------------------------------*/
+
+
 /*REUSABLE COMPONENTS*/
+
+
 /*-------------------------------------------*/
 
 .row {
@@ -40,6 +46,8 @@ html {
 section {
     padding: 80px 0;
 }
+
+
 
 
 /* ----- HEADINGS ----- */
@@ -87,6 +95,8 @@ h3 {
 }
 
 
+
+
 /* ----- PARAGRAPHS ----- */
 
 .long-copy {
@@ -103,6 +113,8 @@ h3 {
     font-size: 90%;
     line-height: 145%;
 }
+
+
 
 
 /* ----- ICONS ----- */
@@ -122,6 +134,8 @@ h3 {
     padding-left: 2%;
     display: block;
 }
+
+
 
 
 /* ----- BUTTONS ----- */
@@ -169,6 +183,8 @@ h3 {
 }
 
 
+
+
 /*-------------------------------------------*/
 
 
@@ -178,11 +194,25 @@ h3 {
 /*-------------------------------------------*/
 
 header {
+    margin-left: 5%;
+    float: left;
+    height: 100vh;
+}
+
+
+body {
     background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(img/background-img1.jpg);
     background-size: cover;
     background-position: center;
-    height: 100vh;
 }
+
+
+section {
+    margin-top: 8%;
+    float: left;
+}
+
+
 
 .ada-home-text-box {
     position: absolute;
@@ -197,11 +227,13 @@ header {
     height: 250px;
     width: auto;
     float: none;
+    margin: 3px;
 }
 
 .main-nav {
     float: left, bottom;
     list-style: none;
+    max-width: 100px;
     margin-top: 40px;
 }
 
@@ -214,7 +246,7 @@ header {
 .main-nav li a:link,
 .main-nav li a:visited {
     padding: 6px 0;
-    color: #fff;
+    color: red;
     text-decoration: none;
     text-transform: uppercase;
     font-size: 90%;
@@ -228,26 +260,37 @@ header {
     border-bottom: 2px solid #a43125;
 }
 
+
+
+
 /*-------------------------------------------*/
+
+
 /*GALLERY*/
+
+
 /*-------------------------------------------*/
-.gallery-showcase{
+
+.gallery-showcase {
+    float: left;
     list-style: none;
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
 }
 
-.gallery-showcase li{
+.gallery-showcase li {
     display: block;
     float: left;
     width: 25%;
     height: auto;
 }
-.gallery-photo{
+
+.gallery-photo {
     width: 100%;
     margin: 0
 }
-.gallery-photo img{
+
+.gallery-photo img {
     width: 100%;
     height: auto;
 }
