@@ -19,8 +19,8 @@ Darker red: ##a43125;
 }
 
 html {
-    /*    color: #555;*/
-    color: #fff;
+        color: #555;
+/*    color: #fff;*/
     font-family: 'Lato', 'Arial', sans-serif;
     font-size: 20px;
     font-weight: 300;
@@ -45,6 +45,7 @@ html {
 
 section {
     padding: 80px 0;
+    float: left;
 }
 
 
@@ -194,23 +195,37 @@ h3 {
 /*-------------------------------------------*/
 
 header {
-    margin-left: 5%;
+    margin-left: 2.5%;
     float: left;
     height: 100vh;
 }
 
+.top-header{
+    height: 30vh;
+    float: none;
+}
 
-body {
+.content-page{
+    height: 50vh;
+    float: left;
+    margin: 0 auto;
+    width: 70%
+}
+
+div-most-outer{
+    height: 100%;
+}
+
+.body-background {
     background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(img/background-img1.jpg);
     background-size: cover;
     background-position: center;
 }
-
-
-section {
-    margin-top: 8%;
-    float: left;
+.body-services{
+    background-image: none;;
+    background-color: white;
 }
+
 
 
 
