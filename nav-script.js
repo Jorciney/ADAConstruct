@@ -1,3 +1,4 @@
+// animation
 jQuery.noConflict()(function () {
     $('#nav').on('click', 'a', function () {
         $('#content-placeholder').hide(600);
@@ -7,15 +8,16 @@ jQuery.noConflict()(function () {
 });
 
 function loadServicesContent() {
-            document.getElementById('content-placeholder').innerHTML = '<object type=\'text/html\' style="min-width:100%; min-height: 101%; overflow:hidden;"  data=\'services.html\' ></object>';
-        }
+    document.getElementById('content-placeholder').innerHTML = '<object type=\'text/html\' style="min-width:100%; min-height: 101%; overflow:hidden; height:100%;"  data=\'services.html\' ></object>';
+}
 
-        function loadGalleryContent() {
-            document.getElementById('content-placeholder').innerHTML = '<object type=\'text/html\' style="min-width:100%; min-height: 101%; overflow:hidden;" data=\'gallery.html\' ></object>';
-        }
-        function loadHomeContent() {
-            document.getElementById('content-placeholder').innerHTML = '<object type=\'text/html\' style="min-width:100%; min-height: 101%; overflow:hidden;" data=\'index.html\' ></object>';
-        }
+function loadGalleryContent() {
+    document.getElementById('content-placeholder').innerHTML = '<object type=\'text/html\' style="min-width:100%; min-height: 101%; overflow:hidden;height:100%;" data=\'gallery.html\' ></object>';
+}
+
+function loadHomeContent() {
+    document.getElementById('content-placeholder').innerHTML = '<object type=\'text/html\' style="min-width:100%; min-height: 101%; overflow:hidden height:100%;" data=\'index.html\' ></object>';
+}
 
 // $('#nav-gallery').click(function(){
 //        $('html, body').animate({

@@ -40,6 +40,7 @@ html {
 
 .row {
     max-width: 1140px;
+    float: left;
     margin: 0 auto;
 }
 
@@ -206,11 +207,11 @@ header {
 }
 
 .content-page{
-    height: 50vh;
-    float: left;
     margin: 0 auto;
-    width: 70%
+    position:relative;
+
 }
+.hiddenscroll .box { color: green; }
 
 div-most-outer{
     height: 100%;
@@ -242,7 +243,6 @@ div-most-outer{
     height: 250px;
     width: auto;
     float: none;
-    margin: 3px;
 }
 
 .main-nav {
