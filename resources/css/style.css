@@ -12,6 +12,7 @@ Darker red: ##a43125;
 
 /*-------------------------------------------*/
 
+
 * {
     margin: 0;
     padding: 0;
@@ -19,15 +20,13 @@ Darker red: ##a43125;
 }
 
 html {
-        color: #555;
-/*    color: #fff;*/
-    font-family: 'Lato', 'Arial', sans-serif;
-    font-size: 20px;
-    font-weight: 300;
-    text-rendering: optimizeLegibility;
+    color: #555 ;
+    /*    color: #fff;*/
+    font-family: 'Lato', 'Arial', 'sans-serif' !important;
+    font-size: 20px !important;
+    font-weight: 300 !important;
+    text-rendering: optimizeLegibility !important;
 }
-
-
 
 
 /*-------------------------------------------*/
@@ -50,8 +49,6 @@ section {
 }
 
 
-
-
 /* ----- HEADINGS ----- */
 
 h1,
@@ -66,7 +63,7 @@ h1 {
     /*This will be the 48px because the html font-size is 20px*/
     margin-top: 0;
     margin-bottom: 20px;
-    color: #fff;
+    color: #fff !important;
     word-spacing: 4px;
     letter-spacing: 1px;
 }
@@ -97,8 +94,6 @@ h3 {
 }
 
 
-
-
 /* ----- PARAGRAPHS ----- */
 
 .long-copy {
@@ -115,8 +110,6 @@ h3 {
     font-size: 90%;
     line-height: 145%;
 }
-
-
 
 
 /* ----- ICONS ----- */
@@ -136,8 +129,6 @@ h3 {
     padding-left: 2%;
     display: block;
 }
-
-
 
 
 /* ----- BUTTONS ----- */
@@ -185,8 +176,6 @@ h3 {
 }
 
 
-
-
 /*-------------------------------------------*/
 
 
@@ -201,20 +190,23 @@ header {
     height: 100vh;
 }
 
-.top-header{
-    height: 30vh;
-    float: none;
+.top-header {
+    height: 15vh;
+    width: 100%;
 }
 
-.content-page{
+.content-page {
     margin: 0 auto;
-    position:relative;
-
+    position: relative;
 }
-.hiddenscroll .box { color: green; }
 
-div-most-outer{
+.hiddenscroll .box {
+    color: green;
+}
+
+div-most-outer {
     height: 100%;
+    width: 100%;
 }
 
 .body-background {
@@ -222,13 +214,16 @@ div-most-outer{
     background-size: cover;
     background-position: center;
 }
-.body-services{
-    background-image: none;;
+
+.body-no-background {
     background-color: white;
 }
 
-
-
+.body-services {
+    background-image: none;
+    ;
+    background-color: white;
+}
 
 .ada-home-text-box {
     position: absolute;
@@ -239,31 +234,23 @@ div-most-outer{
 }
 
 .logo {
-    margin-top: 20px;
-    height: 20%;
+    margin: 20px;
+    height: 23%;
     width: auto;
     float: none;
 }
 
-.main-nav {
-    float: left, bottom;
-    list-style: none;
-    max-width: 90px;
-    margin-top: 40px;
-}
-
 .main-nav li {
-    display: block;
-    margin-left: 0;
-    margin-bottom: 30px;
+    display: table;
+    margin: 0px auto 0px auto;
 }
 
 .main-nav li a:link,
 .main-nav li a:visited {
     padding: 6px 0;
-    color: red;
+    color: white;
     text-decoration: none;
-	text-align: center;
+    text-align: center;
     text-transform: uppercase;
     font-size: 105%;
     /*it will be 18px;*/
@@ -273,10 +260,11 @@ div-most-outer{
 
 .main-nav li a:hover,
 .main-nav li a:active {
-    border-bottom: 2px solid #a43125;
+    color: #c0392b;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #e5230f;
+    transition: border-bottom 0.4s;
 }
-
-
 
 
 /*-------------------------------------------*/
@@ -310,9 +298,10 @@ div-most-outer{
     width: 100%;
     height: auto;
 }
-.row{
-    margin-left:0px;
-    margin-right:0px;
+
+.row {
+    margin-left: 0px;
+    margin-right: 0px;
 }
 
 #wrapper {
@@ -322,9 +311,9 @@ div-most-outer{
 }
 
 #sidebar-wrapper {
-    margin-left: -160px;
+    margin-left: -200px;
     left: 70px;
-    width: 160px;
+    width: 200px;
     background: #222;
     position: fixed;
     height: 100%;
@@ -335,43 +324,49 @@ div-most-outer{
 .sidebar-nav {
     display: block;
     float: left;
-    width: 150px;
+    width: 200px;
     list-style: none;
     margin: 0;
     padding: 0;
 }
+
 #page-content-wrapper {
     padding-left: 0;
     margin-left: 0;
     width: 100%;
     height: auto;
 }
+
 #wrapper.active {
-    padding-left: 150px;
+    padding-left: 190px;
 }
+
 #wrapper.active #sidebar-wrapper {
-    left: 150px;
+    left: 200px;
 }
 
 #page-content-wrapper {
-  width: 100%;
+    width: 100%;
 }
 
-#sidebar_menu li a, .sidebar-nav li a {
-    color: #999;
-    display: block;
-    float: left;
+#sidebar_menu li a:active {
+    color: white;
+}
+
+#sidebar_menu li a,
+.sidebar-nav li a {
+    color: #c0392b;
     text-decoration: none;
-    width: 150px;
-    background: #252525;
-    border-top: 1px solid #373737;
-    border-bottom: 1px solid #1A1A1A;
+    /*    add a border to between the menus*/
+    /*    border-top: 1px solid #373737;*/
+    /*    border-bottom: 1px solid #1A1A1A;*/
     -webkit-transition: background .5s;
     -moz-transition: background .5s;
     -o-transition: background .5s;
     -ms-transition: background .5s;
     transition: background .5s;
 }
+
 .sidebar_name {
     padding-top: 25px;
     color: #fff;
@@ -379,69 +374,67 @@ div-most-outer{
 }
 
 .sidebar-nav li {
-  line-height: 40px;
-  text-indent: 15px;
+    line-height: 80px;
 }
 
-
 .sidebar-nav li a:hover {
-  color: #fff;
-  background: rgba(255,255,255,0.2);
-  text-decoration: none;
+    color: #e5230f;
+    /*  background: rgba(255,255,255,0.2);*/
+    text-decoration: none;
+    font-size: 118%;
 }
 
 .sidebar-nav li a:active,
 .sidebar-nav li a:focus {
-  text-decoration: none;
+    text-decoration: none;
 }
 
-.sidebar-nav > .sidebar-brand {
-  height: 65px;
-  line-height: 60px;
-  font-size: 230%;
+.sidebar-nav>.sidebar-brand {
+    height: 65px;
+    line-height: 60px;
+    font-size: 230%;
 }
 
-.sidebar-nav > .sidebar-brand a {
-  color: #999999;
+.sidebar-nav>.sidebar-brand a {
+    color: #999999;
 }
 
-.sidebar-nav > .sidebar-brand a:hover {
-  color: #fff;
-  background: none;
+.sidebar-nav>.sidebar-brand a:hover {
+    color: #fff;
+    background: none;
 }
 
-#main_icon
-{
-    float:right;
-   padding: 15% 8%;
+#main_icon {
+    float: right;
+    padding: 10% 10%;
 }
 
 .content-header {
-  height: 65px;
-  line-height: 65px;
+    height: 65px;
+    line-height: 65px;
 }
 
 .content-header h1 {
-  margin: 0;
-  margin-left: 20px;
-  line-height: 65px;
-  display: inline-block;
+    margin: 0;
+    margin-left: 20px;
+    line-height: 65px;
+    /*    display: inline-block;*/
 }
 
 @media (max-width:767px) {
     #wrapper {
-    padding-left: 70px;
-    transition: all .4s ease 0s;
-}
-#sidebar-wrapper {
-    left: 70px;
-}
-#wrapper.active {
-    padding-left: 150px;
-}
-#wrapper.active #sidebar-wrapper {
-    left: 150px;
-    width: 150px;
-    transition: all .4s ease 0s;
-}
+        padding-left: 70px;
+        transition: all .4s ease 0s;
+    }
+    #sidebar-wrapper {
+        left: 70px;
+    }
+    #wrapper.active {
+        padding-left: 150px;
+    }
+    #wrapper.active #sidebar-wrapper {
+        left: 150px;
+        width: 150px;
+        transition: all .4s ease 0s;
+    }
 }
