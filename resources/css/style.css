@@ -389,10 +389,13 @@ div-most-outer {
     text-decoration: none;
 }
 
-.sidebar-nav>.sidebar-brand {
+.sidebar-nav>.sidebar-brand> {
     height: 65px;
     line-height: 60px;
     font-size: 230%;
+}
+.fa{
+	    font-size: xx-large !important;
 }
 
 .sidebar-nav>.sidebar-brand a {

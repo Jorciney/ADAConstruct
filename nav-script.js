@@ -31,9 +31,10 @@ jQuery(document).ready(function ($) {
         //		Here we are going to change the icon of #menu-toggle depending on the active class at that momment.
         var classList = $('#main_icon').attr('class').split(/\s+/);
         $.each(classList, function (index, item) {
-            if (item === 'glyphicon-align-justify') {
-                $('#main_icon').removeClass('glyphicon-align-justify');
-                $('#main_icon').addClass('glyphicon-chevron-left');
+            if (item === 'fa-bars') {
+                $('#main_icon').removeClass('fa fa-bars');
+                $('#main_icon').addClass('fa fa-toggle-off');
+				$('#main_icon').css('font-size', '100%');
 
                 //align the nav text to the center when menu is shown
                 $('.main-nav li a').css('text-align', 'center');
@@ -42,10 +43,10 @@ jQuery(document).ready(function ($) {
                 $('#logo').show();
             }
             //When the menu is open
-            if (item === 'glyphicon-chevron-left') {
-                $('#main_icon').removeClass('glyphicon-chevron-left');
-                $('#main_icon').addClass('glyphicon-align-justify');
-
+            if (item === 'fa-toggle-off') {
+                $('#main_icon').removeClass('fa fa-toggle-off');
+                $('#main_icon').addClass('fa fa-bars');
+				$('#main_icon').css('font-size', '100%');
                 //align the nav text to the left when menu is hidden
                 $('.main-nav li a').css('text-align', 'left');
                 $('.main-nav li').css('margin', '-20px');
