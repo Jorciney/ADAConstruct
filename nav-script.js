@@ -34,7 +34,7 @@ jQuery(document).ready(function ($) {
             if (item === 'fa-bars') {
                 $('#main_icon').removeClass('fa fa-bars');
                 $('#main_icon').addClass('fa fa-toggle-off');
-				$('#main_icon').css('font-size', '100%');
+                $('#main_icon').css('font-size', '100%');
 
                 //align the nav text to the center when menu is shown
                 $('.main-nav li a').css('text-align', 'center');
@@ -46,7 +46,7 @@ jQuery(document).ready(function ($) {
             if (item === 'fa-toggle-off') {
                 $('#main_icon').removeClass('fa fa-toggle-off');
                 $('#main_icon').addClass('fa fa-bars');
-				$('#main_icon').css('font-size', '100%');
+                $('#main_icon').css('font-size', '100%');
                 //align the nav text to the left when menu is hidden
                 $('.main-nav li a').css('text-align', 'left');
                 $('.main-nav li').css('margin', '-20px');
@@ -60,7 +60,7 @@ jQuery(document).ready(function ($) {
 
 
 function loadServicesContent() {
-    document.getElementById('content-placeholder').innerHTML = '<object type=\'text/html\' style="min-width:100%; min-height: 101%; overflow:hidden; height:100%;"  data=\'services.html\' ></object>';
+    document.getElementById('content-placeholder').innerHTML = '<object type=\'text/html\' style="min-width:100%; min-height: 101%; overflow:hidden; height:100%; width:100%"  data=\'services.html\' ></object>';
 }
 
 function loadGalleryContent() {
