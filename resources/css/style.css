@@ -48,6 +48,9 @@ section {
     padding: 80px 0;
     float: left;
 }
+.section-gallery{
+	padding: 0
+}
 
 
 /* ----- HEADINGS ----- */
@@ -292,14 +295,32 @@ div-most-outer {
 
 .gallery-photo {
     width: 100%;
-    margin: 0
+    margin: 0;
+	overflow: hidden;
+	background-color: #000;
 }
 
 .gallery-photo img {
+	opacity: 0.7;
     width: 100%;
     height: auto;
+	transform: scale(1.5);
+	transition: transform 0.5s, opacity 0.5s;
 }
 
+.gallery-photo img:hover {
+	transform: scale(1.03);
+	opacity: 1;
+}
+
+
+/*-------------------------------------------*/
+
+
+/*SIDEBAR*/
+
+
+/*-------------------------------------------*/
 .row {
     margin-left: 0px;
     margin-right: 0px;

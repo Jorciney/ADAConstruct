@@ -64,7 +64,7 @@ function loadServicesContent() {
 }
 
 function loadGalleryContent() {
-    document.getElementById('content-placeholder').innerHTML = '<object type=\'text/html\' style="min-width:100%; min-height: 101%; overflow:hidden;height:100%;" data=\'gallery.html\' ></object>';
+    document.getElementById('content-placeholder').innerHTML = '<object type=\'text/html\' style="min-width:100%; min-height: 101%; overflow:hidden;height:100%;padding:0" data=\'gallery.html\' ></object>';
 }
 
 function loadHomeContent() {
