@@ -59,16 +59,26 @@ jQuery(document).ready(function ($) {
 });
 
 
-function loadServicesContent() {
-    document.getElementById('content-placeholder').innerHTML = '<object type=\'text/html\' style="min-width:100%; min-height: 101%; overflow:hidden; height:100%; width:100%"  data=\'services.html\' ></object>';
-}
+//function loadServicesContent() {
+//    document.getElementById('content-placeholder').innerHTML = '<object type=\'text/html\' style="min-width:100%; min-height: 101%; overflow:hidden; height:100%; width:100%"  data=\'services.html\' ></object>';
+//}
+//function loadGalleryContent() {
+//    document.getElementById('content-placeholder').innerHTML = '<object type=\'text/html\' style="min-width:100%; min-height: 101%; overflow:hidden;height:100%;padding:0" data=\'gallery.html\' ></object>';
+//}
+//
+//function loadHomeContent() {
+//    document.getElementById('content-placeholder').innerHTML = '<object type=\'text/html\' style="min-width:100%; min-height: 101%; overflow:hidden height:100%;" data=\'index.html\' ></object>';
+//}
 
+function loadServicesContent() {
+     $('#content-placeholder').load('services.html');
+}
 function loadGalleryContent() {
-    document.getElementById('content-placeholder').innerHTML = '<object type=\'text/html\' style="min-width:100%; min-height: 101%; overflow:hidden;height:100%;padding:0" data=\'gallery.html\' ></object>';
+         $('#content-placeholder').load('gallery.html');
 }
 
 function loadHomeContent() {
-    document.getElementById('content-placeholder').innerHTML = '<object type=\'text/html\' style="min-width:100%; min-height: 101%; overflow:hidden height:100%;" data=\'index.html\' ></object>';
+             $('#content-placeholder').load('index.html');
 }
 function loadContactContent() {
     document.getElementById('content-placeholder').innerHTML = '<object type=\'text/html\' style="min-width:100%; min-height: 101%; overflow:hidden height:100%;" data=\'contact-us.html\' ></object>';
