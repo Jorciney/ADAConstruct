@@ -70,3 +70,6 @@ function loadGalleryContent() {
 function loadHomeContent() {
     document.getElementById('content-placeholder').innerHTML = '<object type=\'text/html\' style="min-width:100%; min-height: 101%; overflow:hidden height:100%;" data=\'index.html\' ></object>';
 }
+function loadContactContent() {
+    document.getElementById('content-placeholder').innerHTML = '<object type=\'text/html\' style="min-width:100%; min-height: 101%; overflow:hidden height:100%;" data=\'contact-us.html\' ></object>';
+}

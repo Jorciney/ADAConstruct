@@ -97,6 +97,17 @@ h3 {
     font-weight: 400
 }
 
+.underlined:after{
+	display: block;
+    height: 2px;
+    background-color: #c0392b;
+    content: " ";
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
 
 /* ----- PARAGRAPHS ----- */
 
