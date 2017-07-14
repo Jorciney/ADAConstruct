@@ -81,5 +81,8 @@ function loadHomeContent() {
              $('#content-placeholder').load('index.html');
 }
 function loadContactContent() {
-    document.getElementById('content-placeholder').innerHTML = '<object type=\'text/html\' style="min-width:100%; min-height: 101%; overflow:hidden height:100%;" data=\'contact-us.html\' ></object>';
+             $('#content-placeholder').load('contact-us.html');
 }
+//function loadContactContent() {
+//    document.getElementById('content-placeholder').innerHTML = '<object type=\'text/html\' style="min-width:100%; min-height: 101%; overflow:hidden height:100%;" data=\'contact-us.html\' ></object>';
+//}
