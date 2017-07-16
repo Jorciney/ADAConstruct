@@ -2,25 +2,70 @@
 <html>
 
 <head>
-	<link rel="stylesheet" type="text/css" href="resources/css/style.css">
-	<link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
-	<link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
-	<title>ADA Construct</title>
+    <link rel="stylesheet" type="text/css" href="resources/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
+    <title>ADA Construct</title>
 </head>
 
 <body class="body-contact">
-	<section class="section-contact">
-		<div class="row">
-			<h1 class="underlined">Contact opnemen</h1>
-		</div>
-		<br>
-		<div class="row">
-			<a>U kan via onderstaand formulier uw vragen of suggesties toesturen over onze producten en diensten.
+    <section class="section-contact">
+        <div class="row">
+            <h1 class="underlined">Contact opnemen</h1>
+        </div>
+        <br>
+        <div class="row">
+            <a>U kan via onderstaand formulier uw vragen of suggesties toesturen over onze producten en diensten.
 				<br>
 				Wij nemen zo snel mogelijk contact met u op.</a>
-		</div>
-	</section>
+        </div>
+        <br/>
+        <div class="row">
+            <form method="post" action="#" class="contact-form">
+                <div class="row">
+                    <div class="col span-1-of-2">
+                        <label for="name">Naam</label>
+                    </div>
+                    <div class="col span-1-of-2">
+                        <input type="text" id="name" placeholder=" naam" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col span-1-of-2">
+                        <label for="email">E-mail</label>
+                    </div>
+                    <div class="col span-1-of-2">
+                        <input type="email" id="email" placeholder="  your-email@domain.be  " required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col span-1-of-2">
+                        <label for="phone">Telefoon</label>
+                    </div>
+                    <div class="col span-1-of-2">
+                        <input type="tel" id="phone" placeholder="  0484 56 21 30 10  " required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col span-1-of-2">
+                        <label for="message">Vraag of opmerking</label>
+                    </div>
+                    <div class="col span-1-of-2">
+                        <textarea  type="text" id="message" placeholder="  vragen of opmerking...  " required/>
+                    </div>
+                </div>
+                 <div class="row">
+                    <div class="col span-1-of-2">
+                        <label>&nbsp;</label>
+                    </div>
+                    <div class="btn">
+                        <input type="submit" value=" Verzenden ">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
 
 </body>
 
