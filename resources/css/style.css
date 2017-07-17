@@ -83,17 +83,6 @@ section {
     padding: 0
 }
 
-label {
-    font-weight: normal !important;
-}
-
-input, textarea {
-    vertical-align: 9px;
-    font-size:18px; 
-    width: 60%;
-    color: #510404;
-}
-
 
 /* ----- HEADINGS ----- */
 
@@ -168,8 +157,8 @@ h3 {
     line-height: 145%;
 }
 
+/* ------------- ICONS ------------- */
 
-/* ----- ICONS ----- */
 
 .icon-big {
     font-size: 350%;
@@ -188,10 +177,12 @@ h3 {
 }
 
 
-/* ----- BUTTONS ----- */
+/* ------------- BUTTONS ------------- */
 
 .btn:link,
-.btn:visited {
+.btn:visited,
+input[type=submit]
+{
     margin-top: 20px;
     display: inline-block;
     padding: 10px 30px;
@@ -203,7 +194,8 @@ h3 {
 }
 
 .btn-full:link,
-.btn-full:visited {
+.btn-full:visited,
+input[type=submit] {
     background-color: #c0392b;
     border: 1px solid #c0392b;
     color: #fff;
@@ -217,7 +209,10 @@ h3 {
 }
 
 .btn:hover,
-.btn:active {
+.btn:active,
+input[type=submit]:hover,
+input[type=submit]:active
+{
     background-color: #a43125;
 }
 
@@ -232,14 +227,8 @@ h3 {
     border: 1px solid #a43125;
 }
 
+/* ------------- HEADER ------------- */
 
-/*-------------------------------------------*/
-
-
-/* HEADER*/
-
-
-/*-------------------------------------------*/
 
 header {
     margin-left: 2.5%;
@@ -327,13 +316,8 @@ div-most-outer {
 }
 
 
-/*-------------------------------------------*/
+/* ------------- GALLERY ------------- */
 
-
-/*GALLERY*/
-
-
-/*-------------------------------------------*/
 
 .gallery-showcase {
     float: left;
@@ -372,18 +356,44 @@ div-most-outer {
 }
 
 
-/*-------------------------------------------*/
+
+/* ------------- CONTACT FORM ------------- */
 
 
-/*SIDEBAR*/
+.contact-form{
+	width: 100%;
+	margin: 0 auto;
+}
 
+label {
+    font-weight: normal !important;
+}
 
-/*-------------------------------------------*/
+input[type=text],
+input[type=email],
+input[type=tel],
+textarea {
+	width: 100%;
+	padding: 7px;
+	border-radius: 3px;
+	border: 1px solid #ccc;
+    width: 60%;
+    color: #510404;
+}
+textarea{
+	height: 100px;
+}
+*:focus{
+	outline: none;
+}
+
+/* ------------- SIDEBAR ------------- */
+
 
 #wrapper {
     padding-left: 70px;
     transition: all .4s ease 0s;
-    height: 100%
+    height: 120%
 }
 
 #sidebar-wrapper {
