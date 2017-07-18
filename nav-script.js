@@ -1,88 +1,60 @@
-// animation
-jQuery.noConflict()(function () {
-    $('#sidebar').on('click', 'a', function () {
+jQuery(function ($) {
+	var $bodyEl = $('body'),
+		$sidedrawerEl = $('#sidedrawer');
 
-        //         Animation: fadeIn
-        $('#content-placeholder').css({
-            "opacity": "0",
-            "display": "block",
-        }).delay(250).show().animate({
-            opacity: 1
-        });
 
-    });
+	function showSidedrawer() {
+		// show overlay
+		var options = {
+			onclose: function () {
+				$sidedrawerEl
+					.removeClass('active')
+					.appendTo(document.body);
+			}
+		};
+
+		var $overlayEl = $(mui.overlay('on', options));
+
+		// show element
+		$sidedrawerEl.appendTo($overlayEl);
+		setTimeout(function () {
+			$sidedrawerEl.addClass('active');
+		}, 20);
+	}
+
+
+	function hideSidedrawer() {
+		$bodyEl.toggleClass('hide-sidedrawer');
+	}
+
+
+	$('.js-show-sidedrawer').on('click', showSidedrawer);
+	$('.js-hide-sidedrawer').on('click', hideSidedrawer);
 });
-jQuery(document).ready(function ($) {
-    $('#nav').on('click', 'a', function () {
-
-        //         Animation: fadeIn
-        $('#content-placeholder').css({
-            "opacity": "0",
-            "display": "block",
-        }).delay(250).show().animate({
-            opacity: 1
-        });
-
-    });
-    $("#menu-toggle").click(function (e) {
-        e.preventDefault();
-        $("#wrapper").toggleClass("active");
-
-        //		Here we are going to change the icon of #menu-toggle depending on the active class at that momment.
-        var classList = $('#main_icon').attr('class').split(/\s+/);
-        $.each(classList, function (index, item) {
-            if (item === 'fa-bars') {
-                $('#main_icon').removeClass('fa fa-bars');
-                $('#main_icon').addClass('fa fa-toggle-off');
-                $('#main_icon').css('font-size', '100%');
-
-                //align the nav text to the center when menu is shown
-                $('.main-nav li a').css('text-align', 'center');
-                $('.main-nav li').css('margin', '0px auto 0px auto');
-
-                $('#logo').show();
-            }
-            //When the menu is open
-            if (item === 'fa-toggle-off') {
-                $('#main_icon').removeClass('fa fa-toggle-off');
-                $('#main_icon').addClass('fa fa-bars');
-                $('#main_icon').css('font-size', '100%');
-                //align the nav text to the left when menu is hidden
-                $('.main-nav li a').css('text-align', 'left');
-                $('.main-nav li').css('margin', '-20px');
-
-                $('#logo').hide();
-            }
-        });
-    });
-
-});
-
-
-//function loadServicesContent() {
-//    document.getElementById('content-placeholder').innerHTML = '<object type=\'text/html\' style="min-width:100%; min-height: 101%; overflow:hidden; height:100%; width:100%"  data=\'services.html\' ></object>';
-//}
-//function loadGalleryContent() {
-//    document.getElementById('content-placeholder').innerHTML = '<object type=\'text/html\' style="min-width:100%; min-height: 101%; overflow:hidden;height:100%;padding:0" data=\'gallery.html\' ></object>';
-//}
-//
-//function loadHomeContent() {
-//    document.getElementById('content-placeholder').innerHTML = '<object type=\'text/html\' style="min-width:100%; min-height: 101%; overflow:hidden height:100%;" data=\'index.html\' ></object>';
-//}
 
 function loadServicesContent() {
-     $('#content-placeholder').load('services.html');
+	$('#content-placeholder').load('services.html');
+	hideSideDrawer();
 }
+
 function loadGalleryContent() {
-         $('#content-placeholder').load('gallery.html');
+	$('#content-placeholder').load('gallery.html');
+	hideSideDrawer();
 }
 
 function loadHomeContent() {
-             $('#content-placeholder').load('index.html');
+	$('#content-placeholder').load('index.html');
+	hideSideDrawer();
 }
+
 function loadContactContent() {
-             $('#content-placeholder').load('contact-us.html');
+	$('#content-placeholder').load('contact-us.html');
+	hideSideDrawer();
 }
-//function loadContactContent() {
-//    document.getElementById('content-placeholder').innerHTML = '<object type=\'text/html\' style="min-width:100%; min-height: 101%; overflow:hidden height:100%;" data=\'contact-us.html\' ></object>';
-//}
+
+function hideSideDrawer() {
+var menu = document.querySelector('#sidedrawer'); // Using a class instead, see note below.
+menu.classList.remove('active');
+
+//document.querySelector('body').classList.toggle('hide-sidedrawer');
+}
