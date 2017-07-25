@@ -54,7 +54,10 @@ function loadContactContent() {
 
 function hideSideDrawer() {
 var menu = document.querySelector('#sidedrawer'); // Using a class instead, see note below.
-menu.classList.remove('active');
+	if(menu.classList.contains('active')){
+		menu.classList.remove('active');
+	}
+	document.getElementById("content-placeholder").focus();
 
 //document.querySelector('body').classList.toggle('hide-sidedrawer');
 }
