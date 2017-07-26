@@ -54,6 +54,9 @@ body {
 		margin-bottom: 10px;
 		height: 1500px;
 	}
+	.gallery-showcase li {
+		width: 50%;		
+	}
 }
 
 
@@ -82,9 +85,6 @@ section {
 	float: left;
 }
 
-.section-gallery {
-	padding: 0
-}
 
 
 
@@ -138,8 +138,8 @@ h3 {
 	height: 2px;
 	background-color: #c0392b;
 	content: " ";
-	width: 50%;
-	margin: 0 auto;
+	width: 60%;
+	margin: 0;
 	margin-top: 10px;
 	margin-bottom: 20px;
 }
@@ -314,22 +314,28 @@ div-most-outer {
 /* ------------- GALLERY ------------- */
 
 .gallery-showcase {
-	float: left;
+		display: block;
+      position: relative;
+      left: 15%;
+	float: none;
 	list-style: none;
 	width: 100%;
 	margin: 0 auto;
+
 }
 
 .gallery-showcase li {
 	display: block;
 	float: left;
-	width: 25%;
+	width: 35%;
 	height: auto;
+	margin: 0 auto;
+
 }
 
 .gallery-photo {
 	width: 100%;
-	margin: -1;
+	margin: 0;
 	border: 2px solid rgba(255, 255, 255, 0.92);
 	overflow: hidden;
 	background-color: rgb(0, 0, 0);
@@ -521,6 +527,9 @@ buttons {
 	}
 	#content-placeholder {
 		transform: translate(200px);
+		width: 80% !important;
+		float: left;
+		padding-left: 20px;
 	}
 	
 	body.hide-sidedrawer #header {
@@ -540,7 +549,15 @@ buttons {
 	}
 	.mui-appbar {
 	background-color: rgba(0, 0, 0, 0) !important;
-}
+	}
+	.gallery-showcase{
+		
+      left: 0%;
+	}
+	.gallery-showcase li {
+		width: 25%;		
+	}
+
 }
 
 @media(max-width: 768px){

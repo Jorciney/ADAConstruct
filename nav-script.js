@@ -1,4 +1,17 @@
 jQuery(function ($) {
+	
+	 $('#sidebar').on('click', 'a', function () {
+
+        //         Animation: fadeIn
+        $('#content-placeholder').css({
+            "opacity": "0",
+            "display": "block",
+        }).delay(250).show().animate({
+            opacity: 1
+        });
+
+    });
+	
 	var $bodyEl = $('body'),
 		$sidedrawerEl = $('#sidedrawer');
 
@@ -31,7 +44,7 @@ jQuery(function ($) {
 	$('.js-show-sidedrawer').on('click', showSidedrawer);
 	$('.js-hide-sidedrawer').on('click', hideSidedrawer);
 });
-
+   
 function loadServicesContent() {
 	$('#content-placeholder').load('services.html');
 	hideSideDrawer();
@@ -57,7 +70,5 @@ var menu = document.querySelector('#sidedrawer'); // Using a class instead, see 
 	if(menu.classList.contains('active')){
 		menu.classList.remove('active');
 	}
-	document.getElementById("content-placeholder").focus();
 
-//document.querySelector('body').classList.toggle('hide-sidedrawer');
 }
