@@ -11,6 +11,17 @@ jQuery(function ($) {
         });
 
     });
+	$('.btn').click(function () {
+
+        //         Animation: fadeIn
+        $('#content-placeholder').css({
+            "opacity": "0",
+            "display": "block",
+        }).delay(250).show().animate({
+            opacity: 1
+        });
+    });
+
 	
 	var $bodyEl = $('body'),
 		$sidedrawerEl = $('#sidedrawer');
