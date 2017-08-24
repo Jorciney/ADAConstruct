@@ -67,12 +67,16 @@ function loadGalleryContent() {
 }
 
 function loadHomeContent() {
-	$('#content-placeholder').load('index.html');
+	$('#content-placeholder').load('home.html');
 	hideSideDrawer();
 }
 
 function loadContactContent() {
 	$('#content-placeholder').load('contact-us.html');
+	hideSideDrawer();
+}
+function loadAboutContent() {
+	$('#content-placeholder').load('about.html');
 	hideSideDrawer();
 }
 

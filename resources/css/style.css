@@ -103,7 +103,7 @@ h1,
 welkomTxt {
 	font-size: 240%;
 	/*This will be the 48px because the html font-size is 20px*/
-	margin-top: 0;
+	margin-top: 0 !important;
 	margin-bottom: 20px;
 	color: #fff !important;
 	word-spacing: 4px;
@@ -135,6 +135,9 @@ h3 {
 	font-weight: 400
 }
 
+.left{
+    margin-left: 0 !important;
+}
 
 .underlined:after {
 	background-color: #c0392b;
@@ -191,7 +194,14 @@ h3 {
 	margin-bottom: 10px;
 	padding-left: 2%;
 }
-
+.icon-medium {
+	font-size: 170%;
+	color: #c0392b;
+    display: contents;
+    float: left;
+    padding-left: 2%;
+    padding-right: 5%;
+}
 .ada-icon {
 	height: 30%;
 	width: 30%;
@@ -226,7 +236,9 @@ input[type=submit] {
 	color: #fff;
 	margin-right: 20px;
 }
-
+.submit{
+    margin-top: 0;
+}
 .btn-ghost:link,
 .btn-ghost:visited {
 	color: #dc6f64;
@@ -319,6 +331,7 @@ div-most-outer {
 	/*it will be 18px;*/
 	border-bottom: 2px solid transparent;
 	transition: border-bottom 0.2s;
+    outline-width: 0;
 }
 
 .main-nav li a:hover,
@@ -396,13 +409,14 @@ textarea {
 	width: 100%;
 	padding: 7px;
 	border-radius: 3px;
+    float: left;
 	border: 1px solid #ccc;
 	width: 60%;
 	color: #510404;
 }
 
 textarea {
-	height: 100px;
+	height: 70px;
 }
 
 *:focus {

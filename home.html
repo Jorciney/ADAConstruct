@@ -1,94 +1,30 @@
 <!DOCTYPE html>
+
 <html>
 
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
 	<link rel="stylesheet" type="text/css" href="resources/css/style.css">
 	<link rel="stylesheet" type="text/css" href="vendors/css/ionicons.css">
 	<link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400" rel="stylesheet">
-	<!--	<script src="http://code.jquery.com/jquery.min.js"></script>-->
+	<script src="http://code.jquery.com/jquery.min.js"></script>
 	<title>ADA Construct</title>
-	<!--	Load Jquery-->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-	<!--    CHEK THIS FONT TOMORROW-->
-	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-	<script src="vendors/js/lightbox.js"></script>
-	<link rel="stylesheet" type="text/css" href="vendors/css/lightbox.css">
-	<!-- Bootstrap -->
-	<!--    <link href="vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet">-->
-	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-
-	<!--	https://www.muicss.com/docs/v1/example-layouts/responsive-side-menu-->
-
-	<link href="//cdn.muicss.com/mui-0.9.18/css/mui.min.css" rel="stylesheet" type="text/css" />
-	<script src="//cdn.muicss.com/mui-0.9.18/js/mui.min.js"></script>
-	<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
-
-
-
-	<!--	Navigation-->
-	<script src="nav-script.js"></script>
 </head>
 
-
-<body class="body-background" id="main-body">
-	<div>
-		<header id="header">
-			<div class="mui-appbar mui--appbar-line-height">
-				<div class="mui-container-fluid">
-					<a class="sidedrawer-toggle mui--visible-xs-inline-block mui--visible-sm-inline-block js-show-sidedrawer">☰</a>
-					<a class="sidedrawer-toggle mui--hidden-xs mui--hidden-sm js-hide-sidedrawer">☰</a>
-					<span class="mui--text-title mui--visible-xs-inline-block">ADA Construct</span>
-				</div>
-			</div>
-		</header>
-	</div>
-	<div class="div-most-outer">
-		<div class="mui--appbar-height"></div>
-		<div class="mui-container-fluid">
-			<div class="top-header"></div>
-
-			<div class="row hiddenscroll" id="content-placeholder" style="overflow:hidden; width:100%;height:auto;">
-				<div class="ada-home-text-box" style="height:900px; transform: translate(100px);">
-					<h1 class="welkomTxt">Welkom bij ADA Construct.
-						<br>Kwalitatief bouwen of renoveren?
-					</h1>
-
-					<a class="btn btn-full" href="#" onclick="loadContactContent()">Contact Opnemen</a>
-					<a class="btn btn-ghost" onclick="loadServicesContent()" href="#">Wat Doen We? </a>
-
-				</div>
-			</div>
-
-			<div class="footer row" id="footer">
+<body class="body">
+	<section class="section-index">
+		<div class="row">
+			<div class="ada-home-text-box">
+				<h1>Welkom bij ADA Construct.
+					<br>Kwalitatief bouwen of renoveren?
+				</h1>
+				<a class="btn btn-full" href="#" onclick="loadContactContent()">Contact Opnemen</a>
+				<a class="btn btn-ghost" onclick="loadServicesContent()" href="#" >Wat Doen We? </a>
 
 			</div>
 		</div>
-	</div>
-	<footer></footer>
-	<div id="sidedrawer" class="mui--no-user-select" active>
-		<!-- Sidebar -->
-		<div id="sidebar-wrapper">
-			<!-- Sidebar Icon -->
-			<div id="sidedrawer-brand" class="mui--appbar-line-height">
-				<img src="resources/logo/logo.svg" alt="ADA Construct logo" class="logo" id="logo">
-			</div>
-			<div class="mui-divider"></div>
-			<ul class="main-nav sidebar-nav" id="sidebar">
-				<li><a href="#section-home" onclick="loadHomeContent()" id="nav-index">Home</a></li>
-				<li><a href="#" onclick="loadServicesContent()" data-id="nav-services">Services</a></li>
-				<li><a href="#" onclick="loadGalleryContent()" data-id="nav-gallery">Gallery</a></li>
-				<li><a href="#contact" onclick="loadContactContent()" data-id="nav-contact">Contact</a></li>
-				<li><a href="#section-about">About</a></li>
-			</ul>
-		</div>
-	</div>
+	</section>
 </body>
 
 </html>
