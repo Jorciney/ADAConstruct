@@ -283,7 +283,7 @@ div-most-outer {
 }
 
 .body-background {
-	background-image: linear-gradient(rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.72)), url(img/background-img1.jpg);
+	background-image: linear-gradient(rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.72)), url(img/background.jpg);
 	background-size: cover;
 	color: #fff;
 	background-position: center;
