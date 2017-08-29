@@ -5,18 +5,18 @@ jQuery(function ($) {
         //         Animation: fadeIn
         $('#content-placeholder').css({
             "opacity": "0",
-            "display": "block",
+            "display": "block"
         }).delay(250).show().animate({
             opacity: 1
         });
-
+		
     });
 	$('.btn').click(function () {
 
         //         Animation: fadeIn
         $('#content-placeholder').css({
             "opacity": "0",
-            "display": "block",
+            "display": "block"
         }).delay(250).show().animate({
             opacity: 1
         });

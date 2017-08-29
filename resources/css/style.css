@@ -12,12 +12,24 @@ Darker red: ##a43125;
 
 /*-------------------------------------------*/
 
+.body-background {
+	background: linear-gradient(rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.72)), url(img/background.jpg) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	color: #fff;
+}
+
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 }
 
+html{
+	min-height: 480px;
+}
 html,
 welkomTxt {
 	color: #fff;
@@ -30,7 +42,7 @@ welkomTxt {
 
 body {
 	color: #fff !important;
-	font-size: 20px !important;
+	font-size: 15px !important;
 	/*    color: #fff;*/
 	font-family: 'Lato', 'Arial', 'sans-serif' !important;
 }
@@ -38,6 +50,8 @@ body {
 #content-placeholder {
 	line-height: 1.4em;
 }
+
+
 
 
 
@@ -58,8 +72,9 @@ body {
 	.gallery-showcase li {
 		width: 50%;
 	}
-	
 }
+
+
 
 
 
@@ -88,6 +103,10 @@ section {
 	float: left;
 }
 
+
+.section-home, .section-about{
+	height: 480px;
+}
 
 
 /* ----- HEADINGS ----- */
@@ -135,8 +154,8 @@ h3 {
 	font-weight: 400
 }
 
-.left{
-    margin-left: 0 !important;
+.left {
+	margin-left: 0 !important;
 }
 
 .underlined:after {
@@ -165,13 +184,34 @@ h3 {
 
 
 
+/* ------------- FOOTER ------------- */
+
+footer {
+	background-color: #333;
+	padding-left: 20%;
+	padding-right: 20%;
+ 	clear: both;
+    position: relative;
+    bottom: 0;
+	font-size: 12px;
+}
+
+.footer-nav li {
+	list-style: none;
+	display: inline-block;
+	margin-right: 20px;
+	float: left;
+}
+
+
+
+
 /* ----- PARAGRAPHS ----- */
 
 .long-copy {
 	line-height: 145%;
 	width: 70%;
-	margin-left: 15%;
-	margin-right: 15%;
+	margin-top: 40px;
 }
 
 .grid-box {
@@ -185,6 +225,8 @@ h3 {
 
 
 
+
+
 /* ------------- ICONS ------------- */
 
 .icon-big {
@@ -194,14 +236,16 @@ h3 {
 	margin-bottom: 10px;
 	padding-left: 2%;
 }
+
 .icon-medium {
 	font-size: 170%;
 	color: #c0392b;
-    display: contents;
-    float: left;
-    padding-left: 2%;
-    padding-right: 5%;
+	display: contents;
+	float: left;
+	padding-left: 2%;
+	padding-right: 5%;
 }
+
 .ada-icon {
 	height: 30%;
 	width: 30%;
@@ -209,6 +253,8 @@ h3 {
 	padding-left: 2%;
 	display: block;
 }
+
+
 
 
 
@@ -236,9 +282,11 @@ input[type=submit] {
 	color: #fff;
 	margin-right: 20px;
 }
-.submit{
-    margin-top: 0;
+
+.submit {
+	margin-top: 0;
 }
+
 .btn-ghost:link,
 .btn-ghost:visited {
 	color: #dc6f64;
@@ -265,6 +313,8 @@ input[type=submit]:active {
 
 
 
+
+
 /* ------------- HEADER ------------- */
 
 .top-header {
@@ -282,12 +332,7 @@ div-most-outer {
 	width: 100% !important;
 }
 
-.body-background {
-	background-image: linear-gradient(rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.72)), url(img/background.jpg);
-	background-size: cover;
-	color: #fff;
-	background-position: center;
-}
+
 
 .body-no-background {
 	background-color: white;
@@ -327,11 +372,11 @@ div-most-outer {
 	text-decoration: none;
 	text-align: center;
 	text-transform: uppercase;
-	font-size: 105%;
+	font-size: 120%;
 	/*it will be 18px;*/
 	border-bottom: 2px solid transparent;
 	transition: border-bottom 0.2s;
-    outline-width: 0;
+	outline-width: 0;
 }
 
 .main-nav li a:hover,
@@ -341,6 +386,8 @@ div-most-outer {
 	border-bottom: 2px solid #e5230f;
 	transition: border-bottom 0.4s;
 }
+
+
 
 
 
@@ -391,6 +438,8 @@ div-most-outer {
 
 
 
+
+
 /* ------------- CONTACT FORM ------------- */
 
 .contact-form {
@@ -409,7 +458,7 @@ textarea {
 	width: 100%;
 	padding: 7px;
 	border-radius: 3px;
-    float: left;
+	float: left;
 	border: 1px solid #ccc;
 	width: 60%;
 	color: #510404;
@@ -422,6 +471,8 @@ textarea {
 *:focus {
 	outline: none;
 }
+
+
 
 
 
@@ -477,6 +528,8 @@ textarea {
 
 
 
+
+
 /* ------------- SIDEBAR V2 ------------- */
 
 
@@ -498,6 +551,8 @@ buttons {
 	-moz-osx-font-smoothing: grayscale;
 	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
 }
+
+
 
 
 
@@ -539,13 +594,6 @@ buttons {
 	padding-bottom: 160px;
 }
 
-#footer {
-	box-sizing: border-box;
-	height: 160px;
-	margin-left: 0px;
-	transition: margin-left 0.2s;
-}
-
 @media (min-width: 768px) {
 	#header {
 		left: 200px;
@@ -559,9 +607,7 @@ buttons {
 		margin-left: 200px;
 	}
 
-	#footer {
-		margin-left: 200px;
-	}
+
 	#content-placeholder {
 		transform: translate(200px);
 		width: 80% !important;
@@ -614,7 +660,6 @@ buttons {
 
 
 
-
 /**
 * Icon
 **/
@@ -631,6 +676,8 @@ buttons {
 	color: #fff;
 	text-decoration: none;
 }
+
+
 
 
 /**
