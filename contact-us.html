@@ -22,13 +22,17 @@
         <br/>
         <div class="row">
             <div class="col span-2-of-3 ">
-                <form method="post" action="#" class="contact-form">
+                <form method="post" action="http://www.ipage.com/scripts/formemail.bml" class="contact-form">
+					<input type="hidden" name="my_email" value="info@adaconstruct.be">
+					<input type="hidden" name="subject" value="Contact Via Website: %%name%%">
+					<input type ="hidden" name ="bcc" value="jorciney.dias@hotmail.com">
+
                     <div class="row">
                         <div class="col span-2-of-2 left">
                             <label for="name">Naam</label>
                         </div>
                         <div class="col span-2-of-2 left">
-                            <input type="text" id="name" placeholder="naam" required>
+                            <input type="text" name="name" id="name" placeholder="naam" size="80" required>
                         </div>
                     </div>
                     <div class="row">
@@ -36,7 +40,7 @@
                             <label for="email">E-mail</label>
                         </div>
                         <div class="col span-2-of-2 left">
-                            <input type="email" id="email" placeholder="your-email@domain.be  " required>
+                            <input type="email" name="email" id="email" size="50" placeholder="your-email@domain.be" required>
                         </div>
                     </div>
                     <div class="row">
@@ -44,7 +48,7 @@
                             <label for="phone">Telefoon</label>
                         </div>
                         <div class="col span-2-of-2 left">
-                            <input type="tel" id="phone" placeholder="0484 56 21 30 10  " required>
+                            <input type="tel" id="phone" size="25" placeholder="0484 56 21 30 10 " required>
                         </div>
                     </div>
                     <div class="row">
@@ -52,7 +56,7 @@
                             <label for="message">Vraag of opmerking</label>
                         </div>
                         <div class="col span-2-of-2 left">
-                            <textarea type="text" id="message" placeholder="vragen of opmerking...  " required/>
+                            <textarea type="text" name="message" id="message" placeholder="vragen of opmerking..." size="4000" required/>
                         </div>
                     </div>
                     <div class="row">
@@ -60,7 +64,7 @@
                             <label>&nbsp;</label>
                         </div>
                         <div class="submit">
-                            <input type="submit" value="Verzenden">
+                            <input type="submit" name="submit" value="Verzenden">
                         </div>
                     </div>
                 </form>
