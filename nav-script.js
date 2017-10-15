@@ -70,6 +70,7 @@ function loadServicesContent() {
 }
 
 function loadGalleryContent() {
+    $('#content-placeholder').attr('style', 'height: auto !important');
     $('#content-placeholder').load('gallery.html');
     hideSideDrawer();
 }

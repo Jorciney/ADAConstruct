@@ -97,8 +97,10 @@ section {
 }
 
 .section-home,
+.section-features,
+.section-contact,
 .section-about {
-    height: 480px;
+    height: 71.7vh;
 }
 
 
@@ -818,3 +820,5 @@ position: relative !important; height: auto !important;
 .no-js h1 {
     color: #222222;
 }
+
+
