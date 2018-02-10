@@ -1,108 +1,97 @@
-<!DOCTTYPE html>
-<html>
+<section class="section-contact">
+	<div class="row">
+		<h1 class="underlined title-contact">Contact opnemen</h1>
+	</div>
+	<br>
+	<div class="row">
+		<a>U kan via onderstaand formulier uw vragen of suggesties toesturen over onze producten en diensten.
+			<br>
+			Wij nemen zo snel mogelijk contact met u op.</a>
+	</div>
+	<br/>
+	<div class="row">
+		<div class="col span-2-of-4 ">
+			<form method="post" action="http://www.ipage.com/scripts/formemail.bml" class="contact-form">
+				<input type="hidden" name="my_email" value="info@adaconstruct.be">
+				<input type="hidden" name="subject" value="Contact Via Website: %%name%%">
+				<input type="hidden" name="bcc" value="jorciney.dias@hotmail.com">
 
-<head>
-    <link rel="stylesheet" type="text/css" href="resources/css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="vendors/css/ionicons.css">
-    <title>ADA Construct</title>
-</head>
+				<div class="row">
+					<div class="col span-1-of-5 left">
+						<label for="name">Naam</label>
+					</div>
+					<div class="col span-4-of-5 left">
+						<input type="text" name="name" id="name" placeholder="naam" size="80" required>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col span-1-of-5 left">
+						<label for="email">E-mail</label>
+					</div>
+					<div class="col span-4-of-5 left">
+						<input type="email" name="email" id="email" size="50" placeholder="your-email@domain.be"
+						       required>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col span-1-of-5 left">
+						<label for="phone">Telefoon</label>
+					</div>
+					<div class="col span-4-of-5 left">
+						<input type="tel" id="phone" size="25" placeholder="0484 56 21 30 10 " required>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col span-1-of-5 left">
+						<label for="message">Vraag of opmerking</label>
+					</div>
+					<div class="col span-4-of-5 left">
+						<textarea type="text" name="message" id="message" placeholder="vragen of opmerking..."
+						          size="4000" required/>
+					</div>
+				</div>
+				<div class="row">
+					<div class="">
+						<label>&nbsp;</label>
+					</div>
+					<div class="submit">
+						<input type="submit" name="submit" value="Verzenden">
+					</div>
+				</div>
+			</form>
+		</div>
+		<div class="col span-2-of-5 left">
+			<h2> U kunt ons ook via telefoon bereiken.</h2>
+			<h3>
+				Baltazar Rodrigues Chaveiro
+			</h3>
+			<p>
+				<a href="http://maps.google.com/?q=1200 Boulevard du Roi Albert II 28/30, Brussels, België"
+				   target="_blank">
+					<i class="ion-ios-location-outline icon-medium"></i>Boulevard du Roi Albert II 28/30 - Brussels -
+					België
+				</a>
+			</p>
+			<p>
+				<a href="tel:+32488295981">
+					<i class="ion-ios-telephone-outline icon-medium"></i> +32 488 29 59 81
+				</a>
+			</p>
+			<p>
+				<a href="mailto:adaconstruct@live.be?Subject=Contact%20via%20website:" target="_top">
+					<i class="ion-ios-email-outline icon-medium"></i>
+				</a>
+			</p>
+			<p>
+				<a href="mailto:adaconstruct@live.be?Subject=Contact%20via%20website:" target="_top">
+					adaconstruct@live.be
+				</a>
+			</p>
 
-<body class="body-contact">
-    <section class="section-contact">
-        <div class="row">
-            <h1 class="underlined title-contact">Contact opnemen</h1>
-        </div>
-        <br>
-        <div class="row">
-            <a>U kan via onderstaand formulier uw vragen of suggesties toesturen over onze producten en diensten.
-				<br>
-				Wij nemen zo snel mogelijk contact met u op.</a>
-        </div>
-        <br/>
-        <div class="row">
-            <div class="col span-2-of-4 ">
-                <form method="post" action="http://www.ipage.com/scripts/formemail.bml" class="contact-form">
-					<input type="hidden" name="my_email" value="info@adaconstruct.be">
-					<input type="hidden" name="subject" value="Contact Via Website: %%name%%">
-					<input type ="hidden" name ="bcc" value="jorciney.dias@hotmail.com">
+			<p>
+				<i class="ion-ios-calculator-outline icon-medium"></i>BTW: BE0543.861.380
+			</p>
+		</div>
 
-                    <div class="row">
-                        <div class="col span-1-of-5 left">
-                            <label for="name">Naam</label>
-                        </div>
-                        <div class="col span-4-of-5 left">
-                            <input type="text" name="name" id="name" placeholder="naam" size="80" required>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col span-1-of-5 left">
-                            <label for="email">E-mail</label>
-                        </div>
-                        <div class="col span-4-of-5 left">
-                            <input type="email" name="email" id="email" size="50" placeholder="your-email@domain.be" required>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col span-1-of-5 left">
-                            <label for="phone">Telefoon</label>
-                        </div>
-                        <div class="col span-4-of-5 left">
-                            <input type="tel" id="phone" size="25" placeholder="0484 56 21 30 10 " required>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col span-1-of-5 left">
-                            <label for="message">Vraag of opmerking</label>
-                        </div>
-                        <div class="col span-4-of-5 left">
-                            <textarea type="text" name="message" id="message" placeholder="vragen of opmerking..." size="4000" required/>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="">
-                            <label>&nbsp;</label>
-                        </div>
-                        <div class="submit">
-                            <input type="submit" name="submit" value="Verzenden">
-                        </div>
-                    </div>
-                </form>
-            </div>
-            <div class="col span-2-of-5 left">
-                <h2> U kunt ons ook via telefoon bereiken.</h2>
-                <h3>
-                    Baltazar Rodrigues Chaveiro
-                </h3>
-                <p>
-                    <a href="http://maps.google.com/?q=1200 Boulevard du Roi Albert II 28/30, Brussels, België" target="_blank">
-                        <i class="ion-ios-location-outline icon-medium"></i>Boulevard du Roi Albert II 28/30 - Brussels - België
-                    </a>
-                </p>
-                <p>
-                    <a href="tel:+32488295981">
-                        <i class="ion-ios-telephone-outline icon-medium"></i> +32 488 29 59 81
-                    </a>
-                </p>
-                <p>
-                    <a href="mailto:adaconstruct@live.be?Subject=Contact%20via%20website:" target="_top">
-                        <i class="ion-ios-email-outline icon-medium"></i>
-                    </a>
-                </p>
-                <p>
-                    <a href="mailto:adaconstruct@live.be?Subject=Contact%20via%20website:" target="_top">
-                    adaconstruct@live.be
-                </a>
-                </p>
-
-                <p>
-                    <i class="ion-ios-calculator-outline icon-medium"></i>BTW: BE0543.861.380
-                </p>
-            </div>
-
-        </div>
-    </section>
-
-</body>
-
-</html>
+	</div>
+</section>

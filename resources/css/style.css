@@ -3,12 +3,9 @@ Red collor: #c0392b;
 Darker red: ##a43125;
 */
 
-
 /*-------------------------------------------*/
 
-
 /*BASIC SETUP*/
-
 
 /*-------------------------------------------*/
 
@@ -52,31 +49,25 @@ body {
     line-height: 1.4em;
 }
 
-
 /* If in mobile screen with maximum width 480px. The iPhone screen resolution is 320x480 px (except iPhone4, 640x960) */
 
-@media screen and (max-width: 480) {
+@media screen and (max-width: 480px) {
     #content-placeholder {
         position: relative;
         margin: 0 auto;
         width: 50%;
-        margin-left: auto;
-        margin-right: auto;
         text-align: center;
-        margin-bottom: 10px;
         height: 1500px;
     }
+
     .gallery-showcase li {
         width: 50%;
     }
 }
 
-
 /*-------------------------------------------*/
 
-
 /*REUSABLE COMPONENTS*/
-
 
 /*-------------------------------------------*/
 
@@ -100,9 +91,8 @@ section {
 .section-features,
 .section-contact,
 .section-about {
-    height: 71.7vh;
+    height: 100vh;
 }
-
 
 /* ----- HEADINGS ----- */
 
@@ -164,8 +154,7 @@ h3 {
 }
 
 .title-gallery:after {
-    width: 220px;
-    ;
+    width: 220px;;
 }
 
 .title-services:after {
@@ -176,26 +165,42 @@ h3 {
     width: 50%;
 }
 
-
 /* ------------- FOOTER ------------- */
 
-footer {
-    background-color: #333;
-    padding-left: 20%;
-    padding-right: 20%;
-    clear: both;
-    position: relative;
-    bottom: 0;
-    font-size: 12px;
+@media (min-width: 767px) {
+    footer {
+        background-color: #333;
+        padding-left: 20%;
+        padding-right: 20%;
+        clear: both;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        font-size: 12px;
+    }
 }
 
+/*footer {*/
+/*background-color: #333;*/
+/*color: #a3a3a3;*/
+/*}*/
 .footer-nav li {
-    list-style: none;
-    display: inline-block;
-    margin-right: 20px;
-    float: left;
+list-style: none;
+display: inline-block;
+margin-right: 20px;
+float: left;
 }
 
+/*.footer-nav {*/
+    /*list-style: none;*/
+    /*font-size: 200%;*/
+/*}*/
+
+/*.footer-nav li {*/
+    /*margin: 2px 20px;*/
+    /*display: inline-block;*/
+/*}*/
 
 /* ----- PARAGRAPHS ----- */
 
@@ -213,7 +218,6 @@ footer {
     font-size: 90%;
     line-height: 145%;
 }
-
 
 /* ------------- ICONS ------------- */
 
@@ -241,7 +245,6 @@ footer {
     padding-left: 2%;
     display: block;
 }
-
 
 /* ------------- BUTTONS ------------- */
 
@@ -295,7 +298,6 @@ input[type=submit]:active {
     border: 1px solid #a43125;
 }
 
-
 /* ------------- HEADER ------------- */
 
 .top-header {
@@ -325,7 +327,7 @@ div-most-outer {
     position: static;
     width: 100%;
     margin-top: 40px;
-    height: auto;
+    /*height: auto;*/
     top: 20%;
     left: 60%;
     /*    transform: translate(-50%, -50%);*/
@@ -364,7 +366,6 @@ div-most-outer {
     border-bottom: 2px solid #e5230f;
     transition: border-bottom 0.4s;
 }
-
 
 /* ------------- GALLERY ------------- */
 
@@ -408,7 +409,6 @@ div-most-outer {
     opacity: 1;
 }
 
-
 /* ------------- CONTACT FORM ------------- */
 
 .contact-form {
@@ -440,7 +440,6 @@ textarea {
 *:focus {
     outline: none;
 }
-
 
 /* ------------- SIDEBAR ------------- */
 
@@ -474,11 +473,11 @@ textarea {
     font-size: xx-large !important;
 }
 
-.sidebar-nav>.sidebar-brand a {
+.sidebar-nav > .sidebar-brand a {
     color: #999999;
 }
 
-.sidebar-nav>.sidebar-brand a:hover {
+.sidebar-nav > .sidebar-brand a:hover {
     color: #fff;
     background: none;
 }
@@ -488,9 +487,7 @@ textarea {
     padding: 10% 10%;
 }
 
-
 /* ------------- SIDEBAR V2 ------------- */
-
 
 /**
  * Body CSS
@@ -510,7 +507,6 @@ buttons {
     -moz-osx-font-smoothing: grayscale;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
 }
-
 
 /**
  * Layout CSS
@@ -535,12 +531,15 @@ buttons {
     z-index: 2;
     transition: transform 0.2s;
 }
+
 #mui-overlay {
-    position: absolute  !important;
-position: relative !important; height: auto !important;
-        z-index: 0;
-    overflow:scroll !important;
+    position: absolute !important;
+    position: relative !important;
+    height: auto !important;
+    z-index: 0;
+    overflow: scroll !important;
 }
+
 .mui-scroll-lock {
     overflow: scroll !important;
 }
@@ -560,47 +559,56 @@ position: relative !important; height: auto !important;
     #header {
         left: 200px;
     }
+
     #sidedrawer {
         transform: translate(200px);
     }
+
     #content-wrapper {
         margin-left: 200px;
     }
+
     #content-placeholder {
         transform: translate(200px);
         width: 80% !important;
         float: left;
         padding-left: 20px;
     }
+
     body.hide-sidedrawer #header {
         left: 0;
     }
+
     body.hide-sidedrawer #sidedrawer {
         transform: translate(0px);
     }
+
     body.hide-sidedrawer #content-wrapper {
         margin-left: 0;
     }
+
     body.hide-sidedrawer #footer {
         margin-left: 0;
     }
+
     .mui-appbar {
         background-color: rgba(0, 0, 0, 0) !important;
     }
+
     .gallery-showcase {
         left: 0%;
     }
+
     .gallery-showcase li {
         width: 25%;
     }
 }
 
-@media(max-width: 768px) {
+@media (max-width: 768px) {
     .mui-appbar {
         background-color: rgba(0, 0, 0, 0.65) !important;
     }
 }
-
 
 /**
  * Toggle Sidedrawer
@@ -609,7 +617,6 @@ position: relative !important; height: auto !important;
 #sidedrawer.active {
     transform: translate(200px);
 }
-
 
 /**
 * Icon
@@ -628,12 +635,12 @@ position: relative !important; height: auto !important;
     text-decoration: none;
 }
 
-
 /**
  * Footer CSS
  */
 
 #footer {
+    bottom: 0;
     color: #fff;
 }
 
@@ -641,7 +648,6 @@ position: relative !important; height: auto !important;
     color: #fff;
     text-decoration: underline;
 }
-
 
 /**
 * Loader wheel from here: https://ihatetomatoes.net/create-custom-preloading-screen/
@@ -767,7 +773,6 @@ position: relative !important; height: auto !important;
     right: 0;
 }
 
-
 /* Loaded */
 
 .loaded #loader-wrapper .loader-section.section-left {
@@ -809,7 +814,6 @@ position: relative !important; height: auto !important;
     -webkit-transition: all 0.3s 1s ease-out;
     transition: all 0.3s 1s ease-out;
 }
-
 
 /* JavaScript Turned Off */
 
