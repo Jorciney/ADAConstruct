@@ -569,8 +569,8 @@ buttons {
     }
 
     #content-placeholder {
-        transform: translate(200px);
-        width: 80% !important;
+/*        transform: translate(200px);*/
+        width: 100% !important;
         float: left;
         padding-left: 20px;
     }
