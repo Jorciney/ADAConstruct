@@ -3,12 +3,9 @@ Red collor: #c0392b;
 Darker red: ##a43125;
 */
 
-
 /*-------------------------------------------*/
 
-
 /*BASIC SETUP*/
-
 
 /*-------------------------------------------*/
 
@@ -52,7 +49,6 @@ body {
     line-height: 1.4em;
 }
 
-
 /* If in mobile screen with maximum width 480px. The iPhone screen resolution is 320x480 px (except iPhone4, 640x960) */
 
 @media screen and (max-width: 480px) {
@@ -62,17 +58,15 @@ body {
         width: 50%;
         height: 1500px;
     }
+
     .gallery-showcase li {
         width: 50%;
     }
 }
 
-
 /*-------------------------------------------*/
 
-
 /*REUSABLE COMPONENTS*/
-
 
 /*-------------------------------------------*/
 
@@ -82,15 +76,9 @@ body {
     margin: 0 auto;
 }
 
-.row a {
+.row a, .row a:hover {
     color: #fff;
     text-decoration: none;
-}
-
-section {
-    transform: translate(220px);
-    padding: 0;
-    float: left;
 }
 
 .section-home,
@@ -99,7 +87,6 @@ section {
 .section-about {
     height: 100vh;
 }
-
 
 /* ----- HEADINGS ----- */
 
@@ -161,8 +148,7 @@ h3 {
 }
 
 .title-gallery:after {
-    width: 220px;
-    ;
+    width: 220px;;
 }
 
 .title-services:after {
@@ -173,21 +159,18 @@ h3 {
     width: 50%;
 }
 
-
 /* ------------- FOOTER ------------- */
 
-@media (min-width: 767px) {
-    footer {
-        background-color: #333;
-        padding-left: 20%;
-        padding-right: 20%;
-        clear: both;
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        font-size: 12px;
-    }
+footer {
+    background-color: #333;
+    padding-left: 20%;
+    padding-right: 20%;
+    position: fixed;
+    overflow: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font-size: 10px;
 }
 
 .footer-nav li {
@@ -196,7 +179,6 @@ h3 {
     margin-right: 20px;
     float: left;
 }
-
 
 /* ----- PARAGRAPHS ----- */
 
@@ -214,7 +196,6 @@ h3 {
     font-size: 90%;
     line-height: 145%;
 }
-
 
 /* ------------- ICONS ------------- */
 
@@ -242,7 +223,6 @@ h3 {
     padding-left: 2%;
     display: block;
 }
-
 
 /* ------------- BUTTONS ------------- */
 
@@ -295,7 +275,6 @@ input[type=submit]:active {
     color: #fff;
     border: 1px solid #a43125;
 }
-
 
 /* ------------- HEADER ------------- */
 
@@ -356,7 +335,6 @@ div-most-outer {
     transition: border-bottom 0.4s;
 }
 
-
 /* ------------- GALLERY ------------- */
 
 .gallery-showcase {
@@ -399,7 +377,6 @@ div-most-outer {
     opacity: 1;
 }
 
-
 /* ------------- CONTACT FORM ------------- */
 
 .contact-form {
@@ -431,7 +408,6 @@ textarea {
 *:focus {
     outline: none;
 }
-
 
 /* ------------- SIDEBAR ------------- */
 
@@ -465,11 +441,11 @@ textarea {
     font-size: xx-large !important;
 }
 
-.sidebar-nav>.sidebar-brand a {
+.sidebar-nav > .sidebar-brand a {
     color: #999999;
 }
 
-.sidebar-nav>.sidebar-brand a:hover {
+.sidebar-nav > .sidebar-brand a:hover {
     color: #fff;
     background: none;
 }
@@ -479,9 +455,7 @@ textarea {
     padding: 10% 10%;
 }
 
-
 /* ------------- SIDEBAR V2 ------------- */
-
 
 /**
  * Body CSS
@@ -501,7 +475,6 @@ buttons {
     -moz-osx-font-smoothing: grayscale;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
 }
-
 
 /**
  * Layout CSS
@@ -529,7 +502,6 @@ buttons {
     color: #fff;
     text-decoration: underline;
 }
-
 
 /**
 * Loader wheel from here: https://ihatetomatoes.net/create-custom-preloading-screen/
@@ -697,7 +669,6 @@ buttons {
     transition: all 0.3s 1s ease-out;
 }
 
-
 /* JavaScript Turned Off */
 
 .no-js #loader-wrapper {
@@ -712,133 +683,41 @@ buttons {
     min-height: 90vh;
 }
 
-/*============================================================*/
-/*SIDEDRAWER */
-/*============================================================*/
+section {
+    transform: translate(40px);
+    padding: 0;
+    float: left;
+}
 
-/**
- * Toggle Sidedrawer
- */
+@media (min-width: 768px) {
+    .ada-home-text-box {
+        position: static;
+        width: 100%;
+        margin-top: 190px;
+        height: auto;
+    }
 
-/*#sidedrawer.active {*/
-    /*transform: translate(200px);*/
-/*}*/
+    .section-features,
+    .section-contact,
+    .section-gallery,
+    .section-about {
+        margin-top: 100px;
+        width: 80%;
+    }
 
+    .gallery-showcase {
+        left: 0%;
+    }
 
-/*!***/
-/** Icon*/
-/***!*/
-
-/*.sidedrawer-toggle {*/
-    /*color: #fff;*/
-    /*cursor: pointer;*/
-    /*font-size: 20px;*/
-    /*line-height: 20px;*/
-    /*margin-right: 10px;*/
-/*}*/
-
-/*.sidedrawer-toggle:hover {*/
-    /*color: #fff;*/
-    /*text-decoration: none;*/
-/*}*/
-
-/*#sidedrawer {*/
-    /*position: fixed;*/
-    /*top: 0;*/
-    /*bottom: 0;*/
-    /*width: 200px;*/
-    /*left: -200px;*/
-    /*overflow: hidden;*/
-    /*z-index: 2;*/
-    /*transition: transform 0.2s;*/
-/*}*/
-
-/*#mui-overlay {*/
-    /*position: relative !important;*/
-    /*height: auto !important;*/
-    /*z-index: 0;*/
-    /*overflow: scroll !important;*/
-/*}*/
-
-/*.mui-scroll-lock {*/
-    /*overflow: scroll !important;*/
-/*}*/
-
-/*#content-wrapper {*/
-    /*min-height: 100%;*/
-    /*overflow-x: hidden;*/
-    /*transition: margin-left 0.2s;*/
-    /*z-index: auto;*/
-    /*!* sticky bottom *!*/
-    /*box-sizing: border-box;*/
-    /*margin-bottom: -160px;*/
-    /*padding-bottom: 160px;*/
-/*}*/
-
-
-
-/*====================================================*/
-/*MEDIA QUERY*/
-/*====================================================*/
-/*#sidedrawer {*/
-    /*transform: translate(200px);*/
-    /*z-index: 1;*/
-/*}*/
-/*#content-wrapper {*/
-    /*margin-left: 200px;*/
-/*}*/
-/*#content-placeholder {*/
-    /*width: 100% !important;*/
-    /*float: left;*/
-    /*padding-left: 20px;*/
-/*}*/
-/*body.hide-sidedrawer #header {*/
-    /*left: 0;*/
-/*}*/
-/*body.hide-sidedrawer #sidedrawer {*/
-    /*transform: translate(0px);*/
-/*}*/
-/*body.hide-sidedrawer #content-wrapper {*/
-    /*margin-left: 0;*/
-/*}*/
-/*body.hide-sidedrawer #footer {*/
-    /*margin-left: 0;*/
-/*}*/
-/*.mui-appbar {*/
-    /*background-color: rgba(0, 0, 0, 0) !important;*/
-    /*z-index: 99999;*/
-/*}*/
-/*@media (max-width: 768px) {*/
-
-
-
-/*}*/
-/*@media (min-width: 768px) {*/
-    /*.ada-home-text-box {*/
-        /*position: static;*/
-        /*width: 100%;*/
-        /*margin-top: 190px;*/
-        /*height: auto;*/
-    /*}*/
-    /*.section-home,*/
-    /*.section-features,*/
-    /*.section-contact,*/
-    /*.section-gallery,*/
-    /*.section-about {*/
-        /*margin-top: 140px;*/
-        /*width: 80%*/
-    /*}*/
-    /*#header {*/
-        /*left: 200px;*/
-    /*}*/
-    /*.gallery-showcase {*/
-        /*left: 0%;*/
-    /*}*/
-    /*.gallery-showcase li {*/
-        /*width: 25%;*/
-    /*}*/
-/*}*/
-
+    .gallery-showcase li {
+        width: 25%;
+    }
+}
+@media(max-width: 768px){
+    #my-body, section{
+        height: 100%!important;
+    }
+}
 
 .slideout-menu {
     position: fixed;
@@ -866,4 +745,11 @@ buttons {
 
 .slideout-open .slideout-menu {
     display: block;
+}
+
+.toggle-button {
+    margin: 20px 15px;
+    background-color: transparent;
+    border: none;
+    font-size: 190%;
 }

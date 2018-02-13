@@ -24,88 +24,70 @@
 	<!-- Bootstrap -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
 	      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-	<!--<link href="//cdn.muicss.com/mui-0.9.18/css/mui.min.css" rel="stylesheet" type="text/css"/>-->
-	<!--<script src="//cdn.muicss.com/mui-0.9.18/js/mui.min.js"></script>-->
 	<link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="vendors/css/ionicons.css">
 	<!--https://github.com/Mango/slideout-->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/1.0.1/slideout.min.js"></script>
-
-	<!--	Navigation-->
-	<script src="nav-script.js"></script>
+	<script src="script.js"></script>
 </head>
 <header id="header">
-	<!--<div class="mui-appbar mui&#45;&#45;appbar-line-height">-->
-		<!--<div class="mui-container-fluid">-->
-			<!--<a class="sidedrawer-toggle mui&#45;&#45;visible-xs-inline-block mui&#45;&#45;visible-sm-inline-block js-show-sidedrawer">☰</a>-->
-			<!--<a class="sidedrawer-toggle mui&#45;&#45;hidden-xs mui&#45;&#45;hidden-sm js-hide-sidedrawer">☰</a>-->
-			<!--<span class="mui&#45;&#45;text-title mui&#45;&#45;visible-xs-inline-block">ADA Construct</span>-->
-		<!--</div>-->
-	<!--</div>-->
 </header>
 
-<!--<body class="body-background" id="main-body">-->
-<body class="body-background">
-<div id="content-placeholder" style="overflow:hidden; width:100%;height:71.7vh;">
-		<nav id="menu">
-			<!-- Sidebar Icon -->
-			<!--<div id="sidedrawer-brand" class="mui&#45;&#45;appbar-line-height">-->
-				<!--<img src="resources/logo/logo.svg" alt="ADA Construct logo" class="logo" id="logo">-->
-			<!--</div>-->
-			<!--<div class="mui-divider"></div>-->
-			<ul class="main-nav sidebar-nav" id="sidebar">
-				<li><a href="#" onclick="loadHomeContent()" id="nav-index">Home</a></li>
-				<li><a href="#" onclick="loadServicesContent()" data-id="nav-services">Services</a></li>
-				<li><a href="#" onclick="loadGalleryContent()" data-id="nav-gallery">Gallery</a></li>
-				<li><a href="#" onclick="loadContactContent()" data-id="nav-contact">Contact</a></li>
-				<li><a href="#" onclick="loadAboutContent()" data-id="nav-about">About</a></li>
-			</ul>
-		</nav>
-	<main id="my-panel">
-		<header>
-			<button class="toggle-button">☰</button>
-		</header>
-	</main>
-	<footer id="footer">
-		<div class="row">
-			<div class="col span-1-of-2">
-				<ul class="footer-nav">
-					<li>
-						<a href="#" onclick="loadAboutContent()">About us</a>
-					</li>
-					<li>
-						<a href="#" onclick="loadContactContent()">Contact Us</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-		<div class="row">
-			<p> Copyright &copy; 2017 by Jorciney D. Ch. All rights reserved.</p>
-		</div>
-	</footer>
-	<div class="div-most-outer">
-		<div id="loader-wrapper">
-			<div id="loader"></div>
-			<div class="loader-section section-left"></div>
-			<div class="loader-section section-right"></div>
-		</div>
-		<!--<div class="mui&#45;&#45;appbar-height"></div>-->
-		<!--<div class="mui-container-fluid">-->
-			<!--<div class="top-header"></div>-->
+<body id="my-body" class="body-background">
+<div id="loader-wrapper">
+	<div id="loader"></div>
+	<div class="loader-section section-left"></div>
+	<div class="loader-section section-right"></div>
+</div>
+<nav id="menu">
+	<div id="sidedrawer-brand" class="mui--appbar-line-height">
+		<img src="resources/logo/logo.svg" alt="ADA Construct logo" class="logo" id="logo">
+	</div>
+	<ul class="main-nav sidebar-nav" id="sidebar">
+		<li><a href="#" onclick="loadHomeContent()">Home</a></li>
+		<li><a href="#" onclick="loadServicesContent()">Services</a></li>
+		<li><a href="#" onclick="loadGalleryContent()">Gallery</a></li>
+		<li><a href="#" onclick="loadContactContent()">Contact</a></li>
+		<li><a href="#" onclick="loadAboutContent()">About</a></li>
+	</ul>
+</nav>
+<div id="my-panel">
+	<header>
+		<button class="toggle-button">☰</button>
+	</header>
+	<div id="content-placeholder" style="overflow:hidden; width:100%;height:71.7vh;">
+
+
+		<div class="div-most-outer">
 
 			<div class="ada-home-text-box" style="height:100vh; transform: translate(100px);">
 				<h1 class="welkomTxt">Welkom bij ADA Construct.
 					<br>Kwalitatief bouwen of renoveren?
 				</h1>
-
 				<a class="btn btn-full" href="#" onclick="loadContactContent()">Contact Opnemen</a>
 				<a class="btn btn-ghost" onclick="loadServicesContent()" href="#">Wat Doen We? </a>
-
 			</div>
 		</div>
 	</div>
+</div>
+<footer id="footer">
+	<div class="row">
+		<div class="col span-1-of-2">
+			<ul class="footer-nav">
+				<li>
+					<a href="#" onclick="loadAboutContent()">About us</a>
+				</li>
+				<li>
+					<a href="#" onclick="loadContactContent()">Contact Us</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="row">
+		<p> Copyright &copy; 2017 by Jorciney D. Ch. All rights reserved.</p>
+	</div>
+</footer>
 </div>
 </body>
 </html>
