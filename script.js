@@ -5,7 +5,7 @@ $(document).ready(function () {
         'menu': document.getElementById('menu'),
         'padding': 200,
         'tolerance': 30,
-        'easing': 'cubic-bezier(.32,2,.55,.27)'
+        'easing': 'cubic-bezier(.5,5,.55,.27)'
     });
 
     setTimeout(function () {
@@ -16,7 +16,7 @@ $(document).ready(function () {
 });
 
 window.onload = function () {
-    if (slideout && screen.width >= 720){
+    if (slideout && screen.width >= 720) {
         slideout.toggle();
     }
 };
@@ -52,31 +52,40 @@ jQuery(function ($) {
 
 function loadServicesContent() {
     $('#content-placeholder').load('services.html');
-    toogleMenu();
-µ}
+    handleOverflow(false);
+}
 
 function loadGalleryContent() {
     $('#content-placeholder').load('gallery.html').attr('style', 'height: auto !important');
-    toogleMenu();
+    handleOverflow(true);
 }
 
 function loadHomeContent() {
     $('#content-placeholder').load('home.html');
-    toogleMenu();
+    handleOverflow(false);
 }
 
 function loadContactContent() {
     $('#content-placeholder').load('contact-us.html');
-    toogleMenu();
+    handleOverflow(false);
 }
 
 function loadAboutContent() {
     $('#content-placeholder').load('about.html');
-    toogleMenu();
+    handleOverflow(false);
 }
 
-function toogleMenu(){
-    if (slideout && screen.width <= 720){
+function toogleMenu() {
+    if (slideout && screen.width <= 700) {
         slideout.toggle();
+    }
+}
+
+function handleOverflow(isGallery) {
+    toogleMenu();
+    if (isGallery || screen.width <= 700) {
+        $('.div-most-outer').attr('style', 'overflow-y: scroll; margin-bottom:40px');
+    } else {
+        $('.div-most-outer').attr('style', 'overflow-y: hidden; margin-bottom:0');
     }
 }

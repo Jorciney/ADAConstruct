@@ -52,12 +52,7 @@ body {
 /* If in mobile screen with maximum width 480px. The iPhone screen resolution is 320x480 px (except iPhone4, 640x960) */
 
 @media screen and (max-width: 480px) {
-    #content-placeholder {
-        position: relative;
-        margin: 0 auto;
-        width: 50%;
-        height: 1500px;
-    }
+
 
     .gallery-showcase li {
         width: 50%;
@@ -287,9 +282,8 @@ input[type=submit]:active {
     color: green;
 }
 
-div-most-outer {
-    height: 100%;
-    width: 100% !important;
+.div-most-outer {
+    height: 100vh;
 }
 
 .body-no-background {
@@ -713,11 +707,6 @@ section {
         width: 25%;
     }
 }
-@media(max-width: 768px){
-    #my-body, section{
-        height: 100%!important;
-    }
-}
 
 .slideout-menu {
     position: fixed;
@@ -738,7 +727,7 @@ section {
 }
 
 .slideout-open,
-.slideout-open body,
+.slideout-open,
 .slideout-open .slideout-panel {
     overflow: hidden;
 }
@@ -752,4 +741,8 @@ section {
     background-color: transparent;
     border: none;
     font-size: 190%;
+}
+
+#my-panel {
+    height: 100vh;
 }
