@@ -166,6 +166,7 @@ footer {
     right: 0;
     bottom: 0;
     font-size: 10px;
+    z-index: 999;
 }
 
 .footer-nav li {
