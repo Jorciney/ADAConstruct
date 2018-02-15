@@ -5,7 +5,7 @@ $(document).ready(function () {
         'menu': document.getElementById('menu'),
         'padding': 200,
         'tolerance': 30,
-        'easing': 'cubic-bezier(.5,5,.55,.27)'
+        'easing': 'cubic-bezier(.32,2,.55,.27)'
     });
 
     setTimeout(function () {
@@ -56,7 +56,7 @@ function loadServicesContent() {
 }
 
 function loadGalleryContent() {
-    $('#content-placeholder').load('gallery.html').attr('style', 'height: auto !important');
+    $('#content-placeholder').load('gallery.html').attr('style', 'height: 110vh !important');
     handleOverflow(true);
 }
 

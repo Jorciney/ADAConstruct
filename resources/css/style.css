@@ -53,7 +53,6 @@ body {
 
 @media screen and (max-width: 480px) {
 
-
     .gallery-showcase li {
         width: 50%;
     }
@@ -406,17 +405,11 @@ textarea {
 
 /* ------------- SIDEBAR ------------- */
 
-#wrapper {
-    padding-left: 70px;
-    transition: all .4s ease 0s;
-    height: 120%
-}
-
-#sidebar-wrapper {
+nav {
     background: #222;
     position: fixed;
     height: 100%;
-    transition: all .4s ease 0s;
+    z-index: 1000;
 }
 
 .sidebar-nav {
@@ -715,8 +708,7 @@ section {
     top: 0;
     bottom: 0;
     right: 0;
-    z-index: 0;
-    width: 256px;
+    width: 200px;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
     display: none;
