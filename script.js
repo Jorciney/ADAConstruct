@@ -1,11 +1,13 @@
 var slideout;
+var navMenu;
 $(document).ready(function () {
+    navMenu = document.getElementById('menu');
     slideout = new Slideout({
         'panel': document.getElementById('my-panel'),
         'menu': document.getElementById('menu'),
         'padding': 200,
         'tolerance': 30,
-        'easing': 'cubic-bezier(.32,2,.55,.27)'
+        'easing': 'cubic-bezier(.5,.5,.5,.5)'
     });
 
     setTimeout(function () {
@@ -18,13 +20,15 @@ $(document).ready(function () {
 window.onload = function () {
     if (slideout && screen.width >= 720) {
         slideout.toggle();
-    }
+        navMenu.setAttribute('class', 'slide-in');    }
 };
 
 jQuery(function ($) {
 
     $('.toggle-button').on('click', function () {
-        slideout.toggle();
+
+slideMenu();
+
     });
 
     $('#sidebar').on('click', 'a', function () {
@@ -77,8 +81,14 @@ function loadAboutContent() {
 
 function toogleMenu() {
     if (slideout && screen.width <= 700) {
-        slideout.toggle();
+        slideMenu();
     }
+}
+
+function slideMenu(){
+    var isOpen = navMenu == null ? true : navMenu.classList.contains('slide-in');
+    navMenu.setAttribute('class', isOpen ? 'slide-out' : 'slide-in');
+    slideout.toggle();
 }
 
 function handleOverflow(isGallery) {
