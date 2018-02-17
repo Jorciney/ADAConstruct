@@ -96,6 +96,6 @@ function handleOverflow(isGallery) {
     if (isGallery || screen.width <= 700) {
         $('.div-most-outer').attr('style', 'overflow-y: scroll; margin-bottom:40px');
     } else {
-        $('.div-most-outer').attr('style', 'overflow-y: hidden; margin-bottom:0');
+        $('.div-most-outer').attr('style', 'overflow-y: unset; margin-bottom:0');
     }
 }
