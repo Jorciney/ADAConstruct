@@ -338,25 +338,21 @@ input[type=submit]:active {
 /* ------------- GALLERY ------------- */
 
 .gallery-showcase {
-    display: block;
-    position: relative;
-    left: 15%;
-    float: none;
     list-style: none;
-    width: 100%;
     margin: 0 auto;
 }
 
 .gallery-showcase li {
-    display: block;
-    float: left;
-    width: 35%;
-    height: auto;
     margin: 0 auto;
+    display: inline-block;
+    align-items: right;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 30px;
 }
 
 .gallery-photo {
-    width: 100%;
+    width: 280px;
+    height:200px;
     margin: 0;
     border: 2px solid rgba(255, 255, 255, 0.92);
     overflow: hidden;
@@ -364,17 +360,36 @@ input[type=submit]:active {
 }
 
 .gallery-photo img {
-    opacity: 0.7;
-    width: 100%;
-    height: auto;
-    transform: scale(1.5);
-    transition: transform 0.5s, opacity 0.5s;
+    width: 110%;
+    height: 110%; /* this is optional*/
+    -webkit-transform: scale(1.25);
+    -moz-transform: scale(1.25);
+    -ms-transform: scale(1.25);
+    -o-transform: scale(1.25);
+    transform: scale(1.25);
+    transition: all .5s ease-out;
+    position: relative;
+    border-radius: 5px;
+    -webkit-filter: grayscale(70%);
+    filter: grayscale(70%)
 }
 
 .gallery-photo img:hover {
-    border: 0px;
-    transform: scale(1.03);
     opacity: 1;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25)
+}
+
+.section-gallery {
+    min-height: 90vh;
+    display: grid;
+    padding: 80px 80px;
 }
 
 /* ------------- CONTACT FORM ------------- */
@@ -660,9 +675,6 @@ buttons {
     color: #222222;
 }
 
-.section-gallery {
-    min-height: 90vh;
-}
 
 section {
     transform: translate(40px);
