@@ -15,7 +15,7 @@
 	<link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
 	<link rel="stylesheet" type="text/css" href="resources/css/style.css">
 	<!--	Load Jquery-->
-	<script src="resources/script/jquery-3.2.1.min.js"></script>
+	<script src="vendors/js/jquery-3.2.1.min.js"></script>
 
 	<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>-->
 	<!--    CHEK THIS FONT TOMORROW-->
@@ -29,65 +29,73 @@
 	<link rel="stylesheet" type="text/css" href="vendors/css/ionicons.css">
 	<!--https://github.com/Mango/slideout-->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/1.0.1/slideout.min.js"></script>
-	<!--angularjs-->
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
 	<script src="script.js"></script>
+	<script src="vendors/js/angular.min.js"></script>
 </head>
+<script src="resources/script/adaNgScript.js"></script>
+<script type="text/javascript" src="vendors/js/angular-animate.min.js"></script>
 <header id="header">
 </header>
 
-<body id="my-body" class="body-background">
-<div id="loader-wrapper">
-	<div id="loader"></div>
-	<div class="loader-section section-left"></div>
-	<div class="loader-section section-right"></div>
-</div>
-<nav id="menu">
-	<div id="sidedrawer-brand" class="mui--appbar-line-height">
-		<img src="resources/logo/logo.svg" alt="ADA Construct logo" class="logo" id="logo">
+<body id="my-body" class="body-background" data-ng-app="myApp">
+<div data-ng-controller="MainController">
+	<div id="loader-wrapper">
+		<div id="loader"></div>
+		<div class="loader-section section-left"></div>
+		<div class="loader-section section-right"></div>
 	</div>
-	<ul class="main-nav sidebar-nav" id="sidebar">
-		<li><a href="#" onclick="loadHomeContent()">Home</a></li>
-		<li><a href="#" onclick="loadServicesContent()">Services</a></li>
-		<li><a href="#" onclick="loadGalleryContent()">Gallery</a></li>
-		<li><a href="#" onclick="loadContactContent()">Contact</a></li>
-		<li><a href="#" onclick="loadAboutContent()">About</a></li>
-	</ul>
-</nav>
-<div id="my-panel">
-	<div class="div-most-outer">
-		<header>
-			<button class="toggle-button">☰</button>
-		</header>
-		<div id="content-placeholder" style="width:100%;">
-			<div class="ada-home-text-box" style="height:100vh; transform: translate(100px);">
-				<h1 class="welkomTxt">Welkom bij ADA Construct.
-					<br>Kwalitatief bouwen of renoveren?
-				</h1>
-				<a class="btn btn-full" href="#" onclick="loadContactContent()">Contact Opnemen</a>
-				<a class="btn btn-ghost" onclick="loadServicesContent()" href="#">Wat Doen We? </a>
+	<nav id="menu">
+		<div id="sidedrawer-brand" class="mui--appbar-line-height">
+			<img src="resources/logo/logo.svg" alt="ADA Construct logo" class="logo" id="logo">
+		</div>
+		<ul class="main-nav sidebar-nav" id="sidebar">
+			<li><a href="#" onclick="loadHomeContent()" ng-click="showHome()">Home</a></li>
+			<li><a href="#" onclick="loadServicesContent()" ng-click="showServices()">Services</a></li>
+			<li><a href="#" onclick="loadGalleryContent()" ng-click="showGallery()">Gallery</a></li>
+			<li><a href="#" onclick="loadContactContent()" ng-click="showContact()">Contact</a></li>
+			<li><a href="#" onclick="loadAboutContent()" ng-click="showAbout()">About</a></li>
+		</ul>
+	</nav>
+	<div id="my-panel" ng-animate-children="true">
+		<div class="div-most-outer" id="div-most-outer">
+			<header>
+				<button class="toggle-button">☰</button>
+			</header>
+			<div ng-if="includeHome" class="slide-animation-container">
+				<div ng-include="homePath" class="vertical-flip"></div>
+			</div>
+			<div ng-if="includeServices" class="slide-animation-container">
+				<div ng-include="servicesPath" class="vertical-flip"></div>
+			</div>
+			<div ng-if="includeGallery" class="slide-animation-container">
+				<div ng-include="galleryPath" class="vertical-flip"></div>
+			</div>
+			<div ng-if="includeContact" class="slide-animation-container">
+				<div ng-include="contactPath" class="vertical-flip" style="width:100%;"></div>
+			</div>
+			<div ng-if="includeAbout" class="slide-animation-container">
+				<div ng-include="aboutPath" class="vertical-flip"></div>
 			</div>
 		</div>
-	</div>
 
-	<footer id="footer">
-		<div class="row">
-			<div class="col span-1-of-2">
-				<ul class="footer-nav">
-					<li>
-						<a href="#" onclick="loadAboutContent()">About us</a>
-					</li>
-					<li>
-						<a href="#" onclick="loadContactContent()">Contact Us</a>
-					</li>
-				</ul>
+		<footer id="footer">
+			<div class="row">
+				<div class="col span-1-of-2">
+					<ul class="footer-nav">
+						<li>
+							<a href="#" ng-click="showAbout()">About us</a>
+						</li>
+						<li>
+							<a href="#" ng-click="showContact()">Contact Us</a>
+						</li>
+					</ul>
+				</div>
 			</div>
-		</div>
-		<div class="row">
-			<p> Copyright &copy; 2017 by Jorciney D. Ch. All rights reserved.</p>
-		</div>
-	</footer>
-</div>
+			<div class="row">
+				<p> Copyright &copy; 2017 by Jorciney D. Ch. All rights reserved.</p>
+			</div>
+		</footer>
+	</div>
 </div>
 </body>
 </html>

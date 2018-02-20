@@ -1,103 +1,14 @@
-<section class="section-gallery" style="height: auto !important;">
+<section class="section-gallery" style="height: auto !important;" >
 	<div class="row">
 		<h1 class="underlined title-gallery">Gallery
 		</h1>
 	</div>
-	<div class="row">
+	<div class="row"  >
 		<ul class="gallery-showcase">
-			<li>
+			<li  ng-repeat="image in imageNames">
 				<figure class="gallery-photo">
-					<a href="resources/images/ada17.jpg" data-lightbox="construction">
-						<img src="resources/images/ada17.jpg" alt="Construction worker">
-					</a>
-				</figure>
-			</li>
-			<li>
-				<figure class="gallery-photo">
-					<a href="resources/images/ada12.jpg" data-lightbox="construction">
-
-						<img src="resources/images/ada12.jpg" data-lightbox="image-1" alt="Floor">
-					</a>
-				</figure>
-			</li>
-			<li>
-				<figure class="gallery-photo">
-					<a href="resources/images/ada13.jpg" data-lightbox="construction">
-						<img src="resources/images/ada13.jpg" alt="Building the floor">
-					</a>
-				</figure>
-			</li>
-
-			<li>
-				<figure class="gallery-photo">
-					<a href="resources/images/ada17.jpg" data-lightbox="construction">
-						<img src="resources/images/ada17.jpg" alt="Construction - Plafonnage">
-					</a>
-				</figure>
-			</li>
-		</ul>
-	</div>
-	<div class="row">
-		<ul class="gallery-showcase">
-			<li>
-				<figure class="gallery-photo">
-					<a href="images/14.jpg" data-lightbox="construction">
-						<img src="images/14.jpg" alt="Construction worker">
-					</a>
-				</figure>
-			</li>
-			<li>
-				<figure class="gallery-photo">
-					<a href="resources/images/ada4.jpg" data-lightbox="construction">
-						<img src="resources/images/ada4.jpg" alt="Crepi">
-					</a>
-				</figure>
-			</li>
-			<li>
-				<figure class="gallery-photo">
-					<a href="resources/images/ada_6.jpg" data-lightbox="construction">
-						<img src="resources/images/ada_6.jpg" alt="Architecture">
-					</a>
-				</figure>
-			</li>
-
-			<li>
-				<figure class="gallery-photo">
-					<a href="images/3.jpg" data-lightbox="construction">
-						<img src="images/3.jpg" alt="Construction - room">
-					</a>
-				</figure>
-			</li>
-		</ul>
-	</div>
-	<div class="row">
-		<ul class="gallery-showcase">
-			<li>
-				<figure class="gallery-photo">
-					<a href="images/67.jpg" data-lightbox="construction">
-						<img src="images/67.jpg" alt="Construction worker">
-					</a>
-				</figure>
-			</li>
-			<li>
-				<figure class="gallery-photo">
-					<a href="resources/images/ada_2.jpg" data-lightbox="construction">
-						<img src="resources/images/ada_2.jpg" alt="Crepi">
-					</a>
-				</figure>
-			</li>
-			<li>
-				<figure class="gallery-photo">
-					<a href="resources/images/construction-worker-569149_1920.jpg" data-lightbox="construction">
-						<img src="resources/images/construction-worker-569149_1920.jpg" alt="Construction worker">
-					</a>
-				</figure>
-			</li>
-			<li>
-				<figure class="gallery-photo">
-					<a href="resources/images/ada_7.jpg" data-lightbox="construction">
-
-						<img src="resources/images/ada_7.jpg" data-lightbox="image-1" alt="Floor">
+					<a href="resources/images/{{image}}" data-lightbox="construction">
+						<img src="resources/images/{{image}}">
 					</a>
 				</figure>
 			</li>

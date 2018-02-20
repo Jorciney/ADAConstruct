@@ -45,7 +45,7 @@ body {
     font-family: 'Lato', 'Arial', 'sans-serif' !important;
 }
 
-#content-placeholder {
+#div-most-outer{
     line-height: 1.4em;
 }
 
@@ -176,11 +176,11 @@ footer {
     float: left;
 }
 
-
 #footer a {
     color: #fff;
     text-decoration: underline;
 }
+
 /* ----- PARAGRAPHS ----- */
 
 .long-copy {
@@ -352,7 +352,7 @@ input[type=submit]:active {
 
 .gallery-photo {
     width: 280px;
-    height:200px;
+    height: 200px;
     margin: 0;
     border: 2px solid rgba(255, 255, 255, 0.92);
     overflow: hidden;
@@ -389,7 +389,8 @@ input[type=submit]:active {
 .section-gallery {
     min-height: 90vh;
     display: grid;
-    padding: 80px 80px;
+    padding: 10px 80px;
+    margin-bottom: 20px;
 }
 
 /* ------------- CONTACT FORM ------------- */
@@ -497,7 +498,6 @@ buttons {
     z-index: 2;
     transition: left 0.2s;
 }
-
 
 /**
 * Loader wheel from here: https://ihatetomatoes.net/create-custom-preloading-screen/
@@ -675,7 +675,6 @@ buttons {
     color: #222222;
 }
 
-
 section {
     transform: translate(40px);
     padding: 0;
@@ -754,19 +753,138 @@ section {
 }
 
 @keyframes slide-in {
-    100% { transform: translateX(0%); }
+    100% {
+        transform: translateX(0%);
+    }
 }
 
 @-webkit-keyframes slide-in {
-    100% { -webkit-transform: translateX(0%); }
+    100% {
+        -webkit-transform: translateX(0%);
+    }
 }
 
 @keyframes slide-out {
-    0% { transform: translateX(0%); }
-    100% { transform: translateX(-100%); }
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
 }
 
 @-webkit-keyframes slide-out {
-    0% { -webkit-transform: translateX(0%); }
-    100% { -webkit-transform: translateX(-100%); }
+    0% {
+        -webkit-transform: translateX(0%);
+    }
+    100% {
+        -webkit-transform: translateX(-100%);
+    }
+}
+
+/*=======================================================*/
+/*Animation on NG Include*/
+/*=======================================================*/
+.slide-animation-container {
+    position: relative;
+}
+
+.slide-animation.ng-enter, .slide-animation.ng-leave {
+    -webkit-transition: all linear 0.5s;
+    -moz-transition: all linear 0.5s;
+    -o-transition: all linear 0.5s;
+    transition: all linear 0.5s;
+
+    opacity: 0;
+    left: 100%;
+
+}
+
+.slide-animation.ng-enter.ng-enter-active,
+.slide-animation.ng-leave {
+    left: 0;
+    opacity: 1;
+}
+
+.slide-animation.ng-leave.ng-leave-active {
+    left: -100%;
+    opacity: 0;
+}
+
+.vertical-flip.ng-leave {
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition-property: -webkit-transform;
+    -moz-transition-property: -moz-transform;
+    -o-transition-property: -o-transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    -webkit-transform-origin: center center;
+    -moz-transform-origin: center center;
+    -ms-transform-origin: center center;
+    -o-transform-origin: center center;
+    transform-origin: center center;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 20;
+}
+
+.vertical-flip.ng-leave-active {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+    z-index: 10;
+}
+
+.vertical-flip.ng-enter {
+    -webkit-transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+    -ms-transform: rotateY(-180deg);
+    -o-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition-property: -webkit-transform;
+    -moz-transition-property: -moz-transform;
+    -o-transition-property: -o-transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    -webkit-transform-origin: center center;
+    -moz-transform-origin: center center;
+    -ms-transform-origin: center center;
+    -o-transform-origin: center center;
+    transform-origin: center center;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 10;
+}
+
+.vertical-flip.ng-enter-active {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+    z-index: 20;
 }

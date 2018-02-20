@@ -55,7 +55,7 @@ slideMenu();
 });
 
 function loadServicesContent() {
-    $('#content-placeholder').load('services.html');
+    // $('#content-placeholder').load('services.html');
     handleOverflow(false);
 }
 
@@ -65,17 +65,17 @@ function loadGalleryContent() {
 }
 
 function loadHomeContent() {
-    $('#content-placeholder').load('home.html');
+    // $('#content-placeholder').load('home.html');
     handleOverflow(false);
 }
 
 function loadContactContent() {
-    $('#content-placeholder').load('contact-us.html');
+    // $('#content-placeholder').load('contact-us.html');
     handleOverflow(false);
 }
 
 function loadAboutContent() {
-    $('#content-placeholder').load('about.html');
+    // $('#content-placeholder').load('about.html');
     handleOverflow(false);
 }
 
@@ -94,8 +94,8 @@ function slideMenu(){
 function handleOverflow(isGallery) {
     toogleMenu();
     if (isGallery || screen.width <= 700) {
-        $('.div-most-outer').attr('style', 'overflow-y: scroll; margin-bottom:40px');
+        $('#div-most-outer').attr('style', 'overflow-y: scroll; margin-bottom:40px');
     } else {
-        $('.div-most-outer').attr('style', 'overflow-y: unset; margin-bottom:0');
+        $('#div-most-outer').attr('style', 'overflow-y: unset; margin-bottom:0');
     }
 }
