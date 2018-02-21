@@ -4,11 +4,11 @@
 		</h1>
 	</div>
 	<div class="row"  >
-		<ul class="gallery-showcase">
+		<ul class="gallery-showcase col span-1-of-2">
 			<li  ng-repeat="image in imageNames">
 				<figure class="gallery-photo">
 					<a href="resources/images/{{image}}" data-lightbox="construction">
-						<img src="resources/images/{{image}}">
+						<img ng-src="resources/images/{{image}}">
 					</a>
 				</figure>
 			</li>
