@@ -11,10 +11,12 @@
 	<br/>
 	<div class="row">
 		<div class="col span-2-of-4 ">
-			<form method="post" action="http://www.ipage.com/scripts/formemail.bml" class="contact-form">
+			<form  method= "post" action="https://www1.ipage.com/scripts/formemail.bml" class="contact-form">
 				<input type="hidden" name="my_email" value="info@adaconstruct.be">
-				<input type="hidden" name="subject" value="Contact Via Website: %%name%%">
-				<input type="hidden" name="bcc" value="jorciney.dias@hotmail.com">
+				<input type="hidden" name="subject" value="Contato Via Website: %%name%%">
+				<!--<input type="hidden" name="Telefone" value="%%Telefone%%">-->
+				<input type="hidden" name="order" value="submit,email,name,Telefone,mensagem">
+
 
 				<div class="row">
 					<div class="col span-1-of-5 left">
@@ -35,18 +37,18 @@
 				</div>
 				<div class="row">
 					<div class="col span-1-of-5 left">
-						<label for="phone">Telefoon</label>
+						<label for="Telefone">Telefoon</label>
 					</div>
 					<div class="col span-4-of-5 left">
-						<input type="tel" id="phone" size="25" placeholder="0484 56 21 30 10 " required>
+						<input type="tel" id="Telefone" name="Telefone" size="25" placeholder="0484 56 21 30 10 " required>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col span-1-of-5 left">
-						<label for="message">Vraag of opmerking</label>
+						<label for="mensagem">Vraag of opmerking</label>
 					</div>
 					<div class="col span-4-of-5 left">
-						<textarea type="text" name="message" id="message" placeholder="vragen of opmerking..."
+						<textarea type="text" name="mensagem" id="mensagem" placeholder="vragen of opmerking..."
 						          size="4000" required></textarea>
 					</div>
 				</div>

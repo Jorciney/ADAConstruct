@@ -190,6 +190,8 @@ footer {
 .long-copy {
     line-height: 145%;
     width: 70vh;
+    font-size: 130%;
+    text-align: center  ;
     margin-top: 40px;
 }
 
@@ -198,7 +200,7 @@ footer {
 }
 
 .grid-box p {
-    font-size: 90%;
+    font-size: 100%;
     line-height: 145%;
 }
 
@@ -418,7 +420,7 @@ textarea {
     float: left;
     border: 1px solid #ccc;
     width: 60%;
-    color: #510404;
+    color: #510404 !important;
 }
 
 textarea {
