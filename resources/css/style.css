@@ -45,7 +45,7 @@ body {
     font-family: 'Lato', 'Arial', 'sans-serif' !important;
 }
 
-#div-most-outer{
+#div-most-outer {
     line-height: 1.4em;
 }
 
@@ -151,6 +151,10 @@ h3 {
 
 .title-contact:after {
     width: 50%;
+}
+
+#message {
+    color: #000000;
 }
 
 /* ------------- FOOTER ------------- */
