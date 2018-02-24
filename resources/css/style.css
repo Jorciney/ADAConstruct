@@ -697,7 +697,7 @@ section {
     .section-contact,
     .section-gallery,
     .section-about {
-        margin-top: 100px;
+        margin-top: 80px;
         width: 80%;
     }
 
@@ -707,6 +707,18 @@ section {
 
     .gallery-showcase li {
         width: 25%;
+    }
+}
+@media(max-width: 480px){
+    section{
+        margin: 20px 30px;
+        padding:0;
+    }
+    .section-gallery{
+        padding:0;
+    }
+    .grid-box p{
+        padding: 25px 0;
     }
 }
 
@@ -901,4 +913,11 @@ section {
 .thank-you-body{
     height: 100%;
      text-align: center;
+}
+
+#myController{
+    width: 100%;
+    overflow-x:hidden;
+    height: 100vh;
+    overflow-y:unset;
 }

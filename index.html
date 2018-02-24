@@ -35,7 +35,7 @@
 </header>
 
 <body id="my-body" class="body-background" data-ng-app="myApp">
-<div data-ng-controller="MainController">
+<div id="myController" data-ng-controller="MainController">
 	<div id="loader-wrapper">
 		<div id="loader"></div>
 		<div class="loader-section section-left"></div>
@@ -46,11 +46,11 @@
 			<img src="resources/logo/logo.svg" alt="ADA Construct logo" class="logo" id="logo">
 		</div>
 		<ul class="main-nav sidebar-nav" id="sidebar">
-			<li><a href="#" onclick="loadHomeContent()" ng-click="showHome()">Home</a></li>
-			<li><a href="#" onclick="loadServicesContent()" ng-click="showServices()">Services</a></li>
-			<li><a href="#" onclick="loadGalleryContent()" ng-click="showGallery()">Gallery</a></li>
-			<li><a href="#" onclick="loadContactContent()" ng-click="showContact()">Contact</a></li>
-			<li><a href="#" onclick="loadAboutContent()" ng-click="showAbout()">About</a></li>
+			<li><a href="#" ng-click="showHome()">Home</a></li>
+			<li><a href="#" ng-click="showServices()">Services</a></li>
+			<li><a href="#" ng-click="showGallery()">Gallery</a></li>
+			<li><a href="#" ng-click="showContact()">Contact</a></li>
+			<li><a href="#" ng-click="showAbout()">About</a></li>
 		</ul>
 	</nav>
 	<div id="my-panel" ng-animate-children="true">
@@ -74,25 +74,24 @@
 				<div ng-include="aboutPath" class="vertical-flip"></div>
 			</div>
 		</div>
-
-		<footer id="footer">
-			<div class="row">
-				<div class="col span-1-of-2">
-					<ul class="footer-nav">
-						<li>
-							<a href="#" ng-click="showAbout()">About us</a>
-						</li>
-						<li>
-							<a href="#" ng-click="showContact()">Contact Us</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-			<div class="row">
-				<p> Copyright &copy; 2017 by Jorciney D. Ch. All rights reserved.</p>
-			</div>
-		</footer>
 	</div>
+	<footer id="footer">
+		<div class="row">
+			<div class="col span-1-of-2">
+				<ul class="footer-nav">
+					<li>
+						<a href="#" ng-click="showAbout()">About us</a>
+					</li>
+					<li>
+						<a href="#" ng-click="showContact()">Contact Us</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="row">
+			<p> Copyright &copy; 2017 by Jorciney D. Ch. All rights reserved.</p>
+		</div>
+	</footer>
 </div>
 </body>
 </html>

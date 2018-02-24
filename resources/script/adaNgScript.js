@@ -19,7 +19,7 @@ myApp.controller('MainController', ['$scope', function ($scope) {
         'ada13.jpg',
         'ada14.jpg',
         'ada15.jpg',
-        'ada16.jpg',
+        // 'ada16.jpg',
         'ada17.jpg',
         'ada18.jpg',
         'ada19.jpg',
@@ -51,6 +51,7 @@ myApp.controller('MainController', ['$scope', function ($scope) {
         $scope.includeHome = false;
         $scope.includeContact = false;
         $scope.includeAbout = false;
+        handleOverflow(true);
     };
 
     $scope.showServices = function () {
@@ -59,7 +60,12 @@ myApp.controller('MainController', ['$scope', function ($scope) {
         $scope.includeHome = false;
         $scope.includeContact = false;
         $scope.includeAbout = false;
-
+        if(screen.width<800){
+            $('#myController').attr('style', 'overflow-y: unset; margin-bottom:0; height:auto;')
+        }else{
+            $('#myController').attr('style', 'overflow-y: unset; margin-bottom:0; height:110vh;')
+        }
+        toggleMenu();
     };
 
     $scope.showHome = function () {
@@ -68,6 +74,7 @@ myApp.controller('MainController', ['$scope', function ($scope) {
         $scope.includeHome = true;
         $scope.includeContact = false;
         $scope.includeAbout = false;
+        handleOverflow(false);
     };
     $scope.showContact = function () {
         $scope.includeGallery = false;
@@ -75,6 +82,7 @@ myApp.controller('MainController', ['$scope', function ($scope) {
         $scope.includeHome = false;
         $scope.includeContact = true;
         $scope.includeAbout = false;
+        handleOverflow(false);
     };
     $scope.showAbout = function () {
         $scope.includeGallery = false;
@@ -82,5 +90,16 @@ myApp.controller('MainController', ['$scope', function ($scope) {
         $scope.includeHome = false;
         $scope.includeContact = false;
         $scope.includeAbout = true;
+        handleOverflow(false);
+    };
+
+
+    function handleOverflow(isGallery) {
+        toggleMenu();
+        if (isGallery || screen.width <= 700) {
+            $('#myController').attr('style', ' margin-bottom:50px; height:auto;');
+        } else {
+            $('#myController').attr('style', 'overflow-y: unset; margin-bottom:0; height:100vh;');
+        }
     }
 }]);
