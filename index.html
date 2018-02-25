@@ -4,11 +4,12 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta http-equiv="cleartype" content="on">
 	<meta name="MobileOptimized" content="320">
 	<meta name="HandheldFriendly" content="True">
 	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Voor ADA Construct is geen enkele klus te groot! Of het gaat over de afbraak van een huis, een kleine
+			renovatie, of een volledige verbouwing, wij staan klaar om uw wensen tot werkelijkheid te brengen.">
 	<title>ADA Construct</title>
 	<link rel="shortcut icon" type="image/x-icon" href="/resources/logo/favicon.ico">
 	<link rel="ICON" href="/resources/logo/favicon.ico" type="image/ico"/>
@@ -28,11 +29,9 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/1.0.1/slideout.min.js"></script>
 	<script src="script.js"></script>
 	<script src="vendors/js/angular.min.js"></script>
+	<script src="resources/script/adaNgScript.js"></script>
+	<script src="vendors/js/angular-animate.min.js"></script>
 </head>
-<script src="resources/script/adaNgScript.js"></script>
-<script type="text/javascript" src="vendors/js/angular-animate.min.js"></script>
-<header id="header">
-</header>
 
 <body id="my-body" class="body-background" data-ng-app="myApp">
 <div id="myController" data-ng-controller="MainController">
@@ -46,32 +45,32 @@
 			<img src="resources/logo/logo.svg" alt="ADA Construct logo" class="logo" id="logo">
 		</div>
 		<ul class="main-nav sidebar-nav" id="sidebar">
-			<li><a href="#" ng-click="showHome()">Home</a></li>
-			<li><a href="#" ng-click="showServices()">Services</a></li>
-			<li><a href="#" ng-click="showGallery()">Gallery</a></li>
-			<li><a href="#" ng-click="showContact()">Contact</a></li>
-			<li><a href="#" ng-click="showAbout()">About</a></li>
+			<li><a href="#" data-ng-click="showHome()">Home</a></li>
+			<li><a href="#" data-ng-click="showServices()">Services</a></li>
+			<li><a href="#" data-ng-click="showGallery()">Gallery</a></li>
+			<li><a href="#" data-ng-click="showContact()">Contact</a></li>
+			<li><a href="#" data-ng-click="showAbout()">About</a></li>
 		</ul>
 	</nav>
-	<div id="my-panel" ng-animate-children="true">
+	<div id="my-panel" data-ng-animate-children="true">
 		<div class="div-most-outer" id="div-most-outer">
 			<header>
 				<button class="toggle-button">☰</button>
 			</header>
-			<div ng-if="includeHome" class="slide-animation-container">
-				<div ng-include="homePath" class="vertical-flip"></div>
+			<div data-ng-if="includeHome" class="slide-animation-container">
+				<div data-ng-include="homePath" class="vertical-flip"></div>
 			</div>
-			<div ng-if="includeServices" class="slide-animation-container">
-				<div ng-include="servicesPath" class="vertical-flip"></div>
+			<div data-ng-if="includeServices" class="slide-animation-container">
+				<div data-ng-include="servicesPath" class="vertical-flip"></div>
 			</div>
-			<div ng-if="includeGallery" class="slide-animation-container">
-				<div ng-include="galleryPath" class="vertical-flip"></div>
+			<div data-ng-if="includeGallery" class="slide-animation-container">
+				<div data-ng-include="galleryPath" class="vertical-flip"></div>
 			</div>
-			<div ng-if="includeContact" class="slide-animation-container">
-				<div ng-include="contactPath" class="vertical-flip" style="width:100%;"></div>
+			<div data-ng-if="includeContact" class="slide-animation-container">
+				<div data-ng-include="contactPath" class="vertical-flip" style="width:100%;"></div>
 			</div>
-			<div ng-if="includeAbout" class="slide-animation-container">
-				<div ng-include="aboutPath" class="vertical-flip"></div>
+			<div data-ng-if="includeAbout" class="slide-animation-container">
+				<div data-ng-include="aboutPath" class="vertical-flip"></div>
 			</div>
 		</div>
 	</div>
@@ -80,10 +79,10 @@
 			<div class="col span-1-of-2">
 				<ul class="footer-nav">
 					<li>
-						<a href="#" ng-click="showAbout()">About us</a>
+						<a href="#" data-ng-click="showAbout()">About us</a>
 					</li>
 					<li>
-						<a href="#" ng-click="showContact()">Contact Us</a>
+						<a href="#" data-ng-click="showContact()">Contact Us</a>
 					</li>
 				</ul>
 			</div>
